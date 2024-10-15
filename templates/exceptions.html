@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content />
+        <meta name="author" content />
+        <title>{{title}} - uim framework</title>
+        <link rel="icon" type="image/x-icon"
+            href="{{rooturl}}/assets/favicon.ico" />
+        {{css}}
+    </head>
+    <body>
+        <div class="page">
+            {{navigation}}
+            <div class="page-wrapper">
+                <div class="page-header">
+                    <div class="row align-items-center mw-100">
+                        <div class="col">
+                            <div class="container-xl">
+                                <div class="page-pretitle">
+                                    Library <a
+                                        href="{{rooturl}}/api/libraries/{{package}}/index.html">{{package}}</a>
+                                </div>
+                                <div class="page-pretitle">
+                                    Module {{module}}
+                                </div>
+                                <h2 class="page-title">
+                                    {{title}}
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mw-100">
+                        <div class="col">
+                            <div class="container-xl">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h3 class="card-title">
+                                            Description
+
+                                        </h3>
+                                        <p
+                                            class="text-secondary">{{description}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mw-100">
+                        <div class="col">
+                            <div class="container-xl">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h3 class="card-title">
+                                            Specification
+                                        </h3>
+                                        <p
+                                            class="text-secondary">{{specification}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mw-100">
+                        <div class="col">
+                            <div class="container-xl">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h3 class="card-title">
+                                            Methods
+                                        </h3>
+                                        <p
+                                            class="text-secondary">{{methods}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-body">
+                    <div class="container-xl">
+                        <!-- Content here -->
+                    </div>
+                </div>
+                {{footer}}
+            </div>
+        </div>
+        {{js}}
+    </body>
+</html>

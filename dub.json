@@ -1,0 +1,16 @@
+{
+	"authors": [
+		"ONS"
+	],
+	"copyright": "Copyright © 2024, ONS",
+	"dependencies": {
+		"colored": "~>0.0.31",
+		"dlib": "~>1.3.0",
+		"uim": "~>24.9.1",
+		"uim:core": "~>24.9.1",
+		"vibe-d": "~>0.9"
+	},
+	"description": "A simple vibe.d server application.",
+	"license": "Apache-2.0",
+	"name": "documenter"
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content />
+        <meta name="author" content />
+        <title>Documentation - uim framework</title>
+        <link rel="icon" type="image/x-icon"
+            href="{{rooturl}}/assets/favicon.ico" />
+        {{css}}
+    </head>
+    <body>
+        <div class="page">
+            {{navigation}}
+            <div class="page-wrapper">
+                <div class="page-header">
+                    <div class="row align-items-center mw-100">
+                        <div class="col">
+                            <div class="container-xl">
+                                <div class="page-pretitle">
+                                    {{breadcrumbs}}
+                                </div>
+                                <h2 class="page-title">
+                                    {{title}}
+                                </h2>
+                                <div class="page-pretitle">
+                                    Modified {{modified}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-body">
+                    <div class="col">
+                        <div class="container-xl">
+                            {{content}}
+                        </div>
+                    </div>
+                </div>
+                {{footer}}
+            </div>
+        </div>
+        {{js}}
+    </body>
+</html>
