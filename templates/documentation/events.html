@@ -1,3 +1,12 @@
 <!-- Title: Events Management -->
 <!-- Navtitle: Events -->
 <!-- Summary: How to work with events -->
+<p>Application maintainability is a core requirement in software development. Meeting this requirement ensures high-quality code, which involves making objects loosely coupled while also being highly cohesive. Cohesion means that all methods and properties of a class are strongly connected to the class itself and do not try to do the work of other objects, while loose coupling is the measure of how little a class is "wired" to external objects and how much that class depends on them.</p>
+
+<p>There are certain cases where it is necessary to communicate with other parts of an application without hard-coding dependencies. Hard-coding would weaken cohesion and increase class coupling. Using the Observer pattern, which allows objects to notify other objects and anonymous listeners of changes, is a useful pattern to achieve this goal.</p>
+
+<p>Listeners in the Observer pattern can subscribe to events and decide whether to respond to them when they are relevant. These principles are known from the JavaScript environment as event-driven programming.</p>
+
+<p>The uim framwork emulates several aspects of event firing and management in popular JavaScript libraries such as jQuery. In the implementation, an event object is sent to all listeners. The event object contains information about the event and provides the ability to stop event propagation at any time. Listeners can register themselves or delegate this task to other objects and have the ability to change the state and event itself for the rest of the callbacks.</p>
+
+<p>The event subsystem is the heart of the model, behavior, controller, view and helper callbacks.</p>
