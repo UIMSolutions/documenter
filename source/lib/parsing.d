@@ -295,7 +295,7 @@ Json parseClass(Json info, string[] lines) {
         if (lines.length > posHeader) {
             auto nextIntend = lines[nextPos].intendation;
             info["methods"] = Json.emptyObject;
-            auto lines = lines[nextPos .. $]
+            lines = lines[nextPos .. $]
                 .map!(line => line.strip) // .filter!(line => nextIntend == line.intendation)
                 .filter!(line => line.containsAll("(", ")"))
                 .filter!(line => !line.startsWith("//", "/*", "*", "}", "?", ":"))
@@ -329,7 +329,9 @@ Json parseClass(Json info, string[] lines) {
                         line = line.replace("override ", "");
                     }
 
-                    json["visibility"] = parseVisibility(line);
+                    string visibility = parseVisibility(line);
+                    json["visibility"] = visibility;
+                    line = line.removeFirst(visibility).strip;
 
                     json["isProperty"] = line.values.hasValue("@property");
                     line = line.replace("@property ", "");
@@ -387,7 +389,9 @@ void parseInterface(string[] lines, Json fileInfo = Json.emptyObject) {
     line = line.contains("//") ? line.split("//")[0].strip : line;
     line = line.replace("{}", "").replace("{", "").replace("interface", "").strip;
 
-    info["visibility"] = parseVisibility(line);
+    string visibility = parseVisibility(line);
+    info["visibility"] = visibility;
+    line = line.removeFirst(visibility).strip;
 
     info["header"] = line;
     if (line.contains(":")) {
@@ -412,28 +416,23 @@ void parseInterface(string[] lines, Json fileInfo = Json.emptyObject) {
         }
     }
 
-    Interfaces.set(path, info);
+    Interfaces.set(info.getString("name"), info);
 }
 
 // #region parseVisibility
-string parseVisibility(ref string line) {
+string parseVisibility(string line) {
     if (line.values.hasValue("protected")) {
-        line = line.removeFirst("protected");
         return "protected";
     }
     if (line.values.hasValue("private")) {
-        line = line.removeFirst("private");
         return "private";
     }
     if (line.values.hasValue("package")) {
-        line = line.removeFirst("package");
         return "package";
-    }
-    if (line.values.hasValue("public")) {
-        line = line.removeFirst("public");
     }
     return "public";
 }
+
 unittest {
     string test = "void test()";
     assert(parseVisibility(test) == "public");
@@ -444,7 +443,6 @@ unittest {
     assert(parseVisibility(test) == test);
 }
 // #endregion parseVisibility
-
 
 /* Json parseInterface(Json info, string[] content) {
     auto posHeader = posInterfaceHeader(content);
@@ -718,7 +716,9 @@ Json parseClassMethod(string line) {
     info["isInherited"] = line.values.hasValue("override");
     line = line.removeFirst("override");
 
-    info["visibility"] = parseVisibility(line.removeFirst);
+                    string visibility = parseVisibility(line);
+                    info["visibility"] = visibility;
+                    line = line.removeFirst(visibility).strip;
 
     info["header"] = line.strip;
     info["datatype"] = line.split().length > 0 ? line.split()[0] : "";

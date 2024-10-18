@@ -407,8 +407,9 @@ Json readMethodHeader(string line) {
     if (line.endsWith("{"))
         line = line[0 .. $ - 1];
 
-    method["visibility"] = parseVisibility(line);
-    line = line.strip;
+    string visibility = parseVisibility(line);
+    method["visibility"] = visibility;
+    line = line.removeFirst(visibility).strip;
 
     return method;
 }
