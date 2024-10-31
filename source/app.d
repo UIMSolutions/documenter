@@ -32,9 +32,13 @@ void main() {
 	readSdlFiles(projectsPath);
 	Libraries.save;
 
-	readDFiles(projectsPath);
+	auto dfiles = readDFiles(projectsPath);
 	Files.save;
+	
+	Interfaces.parse(dfiles);
 	Interfaces.save;
+
+	return;
 	Modules.save;
 	Packages.save;
 	Classes.save;

@@ -36,14 +36,14 @@ class DCollector {
     }
 
     void set(string name, Json info) {
-        if (name in _infos) {
+        /* if (name in _infos) {
             Json finding = Json(createMap!(string, Json)
                     .set("name", name)
                     .set("category", this.classname)
                     .set("message", "name exists"));
 
             Findings.set(name, finding);
-        }
+        } */
         _infos[name] = info;
     }
 
@@ -54,6 +54,15 @@ class DCollector {
 
     Json readFileData(Json info, DirEntry file) {
         return info;
+    }
+
+    void parse(DirEntry[] files) {
+        files
+            .filter!(file => file.isFile)
+            .each!(file => parse(file));
+    }
+
+    void parse(DirEntry file) {
     }
 
     Json toJson() {

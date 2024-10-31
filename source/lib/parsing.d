@@ -801,13 +801,14 @@ Json parseComments(Json info, string[] lines, size_t startPos) {
 }
 
 // #region d files
-void readDFiles(string path) {
+DirEntry[] readDFiles(string path) {
     auto files = getFilesInPath(path, ".d");
 
     files.each!((file) {
         Files.set(file);        
 
         if (file.isModuleFile) {
+            writeln("File ", file.name, " is module");
             parseModule(file);
         }
 
@@ -823,6 +824,8 @@ void readDFiles(string path) {
             parseInterface(file);
         }
     });
+
+    return files;
 }
 // #endregion d files
 

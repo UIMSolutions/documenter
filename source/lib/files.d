@@ -211,8 +211,7 @@ bool isModuleFile(string path) {
 
 bool isModuleFile(string[] lines) {
   return lines
-    .filter!(line => line.startsWith("module "))
-    .count > 0;
+    .any!(line => line.startsWith("module "));
 }
 // #endregion isModuleFile
 
@@ -237,8 +236,7 @@ bool isClassFile(string path) {
 
 bool isClassFile(string[] lines) {
   return lines
-    .filter!(line => to!string(line).isClass)
-    .count > 0;
+    .any!(line => to!string(line).isClass);
 }
 // #endregion isClassFile
 
@@ -253,7 +251,6 @@ bool isInterfaceFile(string path) {
 
 bool isInterfaceFile(string[] lines) {
   return lines
-    .filter!(line => to!string(line).isInterface)
-    .count > 0;
+    .any!(line => to!string(line).isInterface);
 }
 // #endregion isInterfaceFile

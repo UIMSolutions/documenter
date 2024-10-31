@@ -1,4 +1,14 @@
 {
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\interfaces\\named.d": {
+		"package": "uim.oop.interfaces",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.oop.interfaces.named",
+		"name": "interface INamed {\r",
+		"methods": {},
+		"implements": [],
+		"library": "uim-oop"
+	},
 	"IFixtureStrategy": {
 		"origin": "interface IFixtureStrategy {",
 		"package": "uim.oop.interfaces",
@@ -25,6 +35,16 @@
 		},
 		"implements": [],
 		"library": "uim-oop"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\filesystems\\uim\\filesystems\\interfaces\\link.d": {
+		"package": "uim.filesystems.interfaces",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.filesystems.interfaces.link",
+		"name": "module uim.filesystems.interfaces.link;\r\rimport uim.filesystems;\r\r@safe:\r\rinterface ILink : IFilesystemEntry {\r  bool isLink();\r  bool isFileLink();\r  bool isFolderLink();\r}\r",
+		"methods": {},
+		"implements": [],
+		"library": "uim-filesystems"
 	},
 	"IFilesystemEntry": {
 		"origin": "interface IFilesystemEntry : INamed {",
@@ -224,6 +244,36 @@
 			"INamed"
 		],
 		"library": "uim-filesystems"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\filesystems\\uim\\filesystems\\interfaces\\foldermanager.d": {
+		"package": "uim.filesystems.interfaces",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.filesystems.interfaces.foldermanager",
+		"name": "module uim.filesystems.interfaces.foldermanager;\r\rimport uim.filesystems;\r\r@safe:\rinterface IFolderManager {\r  IFolder folder(string aPath);\r  IFolder folder(string aPath, string aFolderName);\r  IFolder folder(string[] aPath);\r  IFolder folder(string[] aPath, string aFolderName);\r\r  // Returns a Folders collection consisting of all Folder objects contained in the specified folder, including those with hidden and system folder attributes set.\r  bool existsFolders(string aPath);\r  bool existsFolders(string aPath, string aFolderName);\r  bool existsFolders(string[] aPath);\r  bool existsFolders(string[] aPath, string aFolderName);\r\r  size_t countFolders(string aPath);\r  size_t countFolders(string aPath, string aFolderName);\r  size_t countFolders(string[] aPath);\r  size_t countFolders(string[] aPath, string aFolderName);\r\r  IFolder[] folders();\r  IFolder[] folders(string aPath);\r  IFolder[] folders(string aPath, string aFolderName);\r  IFolder[] folders(string[] aPath);\r  IFolder[] folders(string[] aPath, string aFolderName);\r\r  // Checks if a specified folder exists.\r  bool existsFolder(string aPath);\r  bool existsFolder(string aPath, string aFolderName);\r  bool existsFolder(string[] aPath);\r  bool existsFolder(string[] aPath, string aFolderName);\r\r  // Creates folder \r  IFolder createFolder(string aPath);\r  IFolder createFolder(string aPath, string aFolderName);\r  IFolder createFolder(string[] aPath);\r  IFolder createFolder(string[] aPath, string aFolderName);\r\r  // Creates folder if not exits\r  IFolder createIfNotExistsFolder(string aPath);\r  IFolder createIfNotExistsFolder(string aPath, string aFolderName);\r  IFolder createIfNotExistsFolder(string[] aPath);\r  IFolder createIfNotExistsFolder(string[] aPath, string aFolderName);\r\r  // Add folder from one location to another.\r  final bool addFolders(IFolder[] someFolders...) {\r    return addFolders(someFolders.dup);\r  }\r\r  final bool addFolders(IFolder[] someFolders) {\r    if (someFolders.isEmpty) {\r      return false;\r    }\r\r    foreach (myFolder; someFolders) {\r      if (!addFolder(myFolder)) {\r        return false;\r      }\r    }\r\r    return true;\r  }\r\r  bool addFolder(IFolder aFolder);\r\r  bool renameFolder(string oldPathAndName, string newName);\r  bool renameFolder(string aPath, string oldName, string newName);\r  bool renameFolder(string[] oldPathAndName, string newName);\r  bool renameFolder(string[] aPath, string oldName, string newName);\r\r  // Copies folder from one location to another.\r  bool copyFolder(string fromPath, string toPath);\r  bool copyFolder(string[] fromPath, string[] toPath);\r  bool copyFolder(IFolder aFolder, string[] toPath);\r  bool copyFolder(IFolder aFolder, IFolder toFolder);\r\r  // Moves folder from one location to another.\r  bool moveFolder(string fromPath, string toPath);\r  bool moveFolder(string[] fromPath, string[] toPath);\r  bool moveFolder(IFolder aFolder, string[] toPath);\r  bool moveFolder(IFolder aFolder, IFolder toFolder);\r\r  bool removeFolder(string aPath);\r  bool removeFolder(string aPath, string aFolderName);\r  bool removeFolder(string[] aPath);\r  bool removeFolder(string[] aPath, string aFolderName);\r}\r",
+		"methods": {},
+		"implements": [],
+		"library": "uim-filesystems"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\interfaces\\retrystrategy.d": {
+		"package": "uim.oop.interfaces",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.oop.interfaces.retrystrategy",
+		"name": "interface IRetryStrategy {\r",
+		"methods": {},
+		"implements": [],
+		"library": "uim-oop"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\jsonbases\\uim\\jsonbases\\interfaces\\tenantmanager.d": {
+		"package": "uim.jsonbases.interfaces",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.jsonbases.interfaces.tenantmanager",
+		"name": "module uim.jsonbases.interfaces.tenantmanager;\r\rimport uim.jsonbases;\r\r@safe:\rinterface IJsonTenantManager {\r  // Tenants\r  bool hasTenants(string[] someNames...);\r  bool hasTenants(string[] someNames = null);\r  size_t countTenants(string[] someNames...);\r  size_t countTenants(string[] someNames = null);\r  string[] existingTenants(string[] someNames...);\r  string[] existingTenants(string[] someNames = null);\r  string[] tenantNames();\r  IJsonTenant[] tenants();\r\r  // Tenant\r  bool hasTenant(string aName);\r  IJsonTenant tenant(string aName);\r\r  // Add tenants\r  bool addTenants(IJsonTenant[] someTenants...);\r  bool addTenants(IJsonTenant[] someTenants);\r  bool addTenants(IJsonTenant[string] someTenants);\r\r  // Add tenant\r  bool addTenant(IJsonTenant aTenant);\r  bool addTenant(string aName, IJsonTenant aTenant);\r\r  // Create Tenants\r  IJsonTenant[] createTenants(string[] someNames...);\r  IJsonTenant[] createTenants(string[] someNames);\r\r  IJsonTenant createTenant(string aName);\r\r  // Delete\r  bool deleteTenant(string aName);\r}\r",
+		"methods": {},
+		"implements": [],
+		"library": "uim-jsonbases"
 	},
 	"ICommand": {
 		"origin": "interface ICommand : INamed {",
@@ -856,6 +906,26 @@
 		"implements": [],
 		"library": "uim-filesystems"
 	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\controllers\\uim\\controllers\\interfaces\\controller.d": {
+		"package": "uim.controllers.interfaces",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.controllers.interfaces.controller",
+		"name": "interface IController {\r",
+		"methods": {},
+		"implements": [],
+		"library": "uim-controllers"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\core\\uim\\core\\helpers\\classes.d": {
+		"package": "uim.core.helpers",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.core.helpers.classes",
+		"name": "    interface ITest {\r",
+		"methods": {},
+		"implements": [],
+		"library": "uim-core"
+	},
 	"IRetryStrategy": {
 		"origin": "interface IRetryStrategy {",
 		"package": "uim.oop.interfaces",
@@ -1314,6 +1384,56 @@
 		"implements": [],
 		"library": "uim-oop"
 	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\interfaces\\list.d": {
+		"package": "uim.oop.interfaces",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.oop.interfaces.list",
+		"name": "interface IList(T) {\r",
+		"methods": {},
+		"implements": [],
+		"library": "uim-oop"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\jsonbases\\uim\\jsonbases\\interfaces\\base.d": {
+		"package": "uim.jsonbases.interfaces",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.jsonbases.interfaces.base",
+		"name": "module uim.jsonbases.interfaces.base;\r\rimport uim.jsonbases;\r\r@safe:\rinterface IJsonBase : INamed {  \r} ",
+		"methods": {},
+		"implements": [],
+		"library": "uim-jsonbases"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\filesystems\\uim\\filesystems\\interfaces\\folder.d": {
+		"package": "uim.filesystems.interfaces",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.filesystems.interfaces.folder",
+		"name": "module uim.filesystems.interfaces.folder;\r\rimport uim.filesystems;\r\r@safe:\r\rinterface IFolder : IFilesystemEntry, IFolderManager, IFileManager, ILinkManager {\r  // Sets or returns the attributes of a specified folder.\r  long attributes();\r  void attributes(long newAttributes);\r\r  // Returns the date and time when a specified folder was created.\r  long createdOn();\r\r  // Returns the date and time when a specified folder was last accessed.\r  long accessedOn();\r\r  // Returns the date and time when a specified folder was last modified.\r  long modifiedOn();\r\r  // Returns the drive letter of the drive where the specified folder resides.\r  IDrive drive();\r\r  bool hasEntries();\r  bool isEmpty();\r\r  // Returns True if a folder is the root folder and False if not.\r  bool isRootFolder();\r  bool isFolder();\r\r  // Returns the type of a specified folder. */\r  string type();\r\r  // Deletes file.\r  bool remove();\r}\r",
+		"methods": {},
+		"implements": [],
+		"library": "uim-filesystems"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\filesystems\\uim\\filesystems\\interfaces\\entry.d": {
+		"package": "uim.filesystems.interfaces",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.filesystems.interfaces.entry",
+		"name": "module uim.filesystems.interfaces.entry;\r\rimport uim.filesystems;\r\r@safe:\rinterface IFilesystemEntry : INamed {\r  bool hasFilesystem();\r  IFilesystem filesystem();\r\r  // Sets or returns the path of a specified entry.\r  string[] path();\r  void path(string[] aPath);\r\r  // Returns the folder object for the parent of the specified file.\r  IFolder parentFolder();\r  void parentFolder(IFolder aFolder);\r\r  // Name of class\r\r  // Returns the size of a specified folder.\r  size_t size();\r\r  // Rename entry\r  bool rename(string newName);\r\r  // Check if filesystem exists\r   bool exists(); \r\r  // Check if filesystem entry is hidden\r  bool isHidden();\r\r  // Check if filesystem entry is folder\r  bool isFolder();\r\r  // Check if filesystem entry is file\r  bool isFile();\r\r  // Check if filesystem entry is link\r  bool isLink();\r\r  string relPath(string aPath); \r  string relPath(string[] aPath = null); \r\r  string absolutePath(string aPath); \r  string absolutePath(string[] aPath = null); \r\r  string toString();\r}",
+		"methods": {},
+		"implements": [],
+		"library": "uim-filesystems"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\jsonbases\\uim\\jsonbases\\interfaces\\tenant.d": {
+		"package": "uim.jsonbases.interfaces",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.jsonbases.interfaces.tenant",
+		"name": "module uim.jsonbases.interfaces.tenant;\r\rimport uim.jsonbases;\r\r@safe:\rinterface IJsonTenant : INamed {  \r  IJsonBase base();\r}",
+		"methods": {},
+		"implements": [],
+		"library": "uim-jsonbases"
+	},
 	"ICollection(T)": {
 		"origin": "interface ICollection(T) : IKeyAndPath {",
 		"package": "uim.oop.interfaces",
@@ -1496,6 +1616,16 @@
 		],
 		"library": "uim-oop"
 	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\interfaces\\keyandpath.d": {
+		"package": "uim.oop.interfaces",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.oop.interfaces.keyandpath",
+		"name": "interface IKeyAndPath {\r",
+		"methods": {},
+		"implements": [],
+		"library": "uim-oop"
+	},
 	"IStringable": {
 		"origin": "interface IStringable {",
 		"package": "uim.oop.interfaces",
@@ -1608,6 +1738,16 @@
 			"INamed"
 		],
 		"library": "uim-jsonbases"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\interfaces\\containerapplication.d": {
+		"package": "uim.oop.interfaces",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.oop.interfaces.containerapplication",
+		"name": "interface IContainerApplication {\r",
+		"methods": {},
+		"implements": [],
+		"library": "uim-oop"
 	},
 	"IFolder": {
 		"origin": "interface IFolder : IFilesystemEntry, IFolderManager, IFileManager, ILinkManager {",
@@ -1749,6 +1889,26 @@
 		],
 		"library": "uim-filesystems"
 	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\filesystems\\uim\\filesystems\\interfaces\\linkmanager.d": {
+		"package": "uim.filesystems.interfaces",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.filesystems.interfaces.linkmanager",
+		"name": "module uim.filesystems.interfaces.linkmanager;\r\rimport uim.filesystems;\r\r@safe:\rinterface ILinkManager {\r  bool existsLinks(string aPath);\r  bool existsLinks(string[] aPath);\r\r  size_t countLinks(string aPath);\r  size_t countLinks(string[] aPath);\r\r  ILink[] links(string aPath);\r  ILink[] links(string[] aPath);\r\r  // Returns a Link object for a specified path.\r  ILink link(string aPath);\r  ILink link(string[] aPath);\r\r  bool existsLink(string aPath);\r  bool existsLink(string[] aPath);\r\r  bool addLink(ILink aLink);\r\r  // Copies link from one location to another.\r  bool copyLink(string fromPath, string toPath);\r  bool copyLink(string[] fromPath, string[] toPath);\r\r  // Moves one or more links from one location to another.\r  bool moveLink(string fromPath, string toPath);\r  bool moveLink(string[] fromPath, string[] toPath);\r\r  // Checks if a specified link exists.\r  final bool linksExists(ILink[] someLinks) {\r    if (someLinks.isEmpty) {\r      return false;\r    }\r\r    return someLinks.all!(link => link.exists);\r  }\r\r  // Deletes specified link.\r  bool removeLinks(string aPath);\r  bool removeLinks(string[] aPath);\r\r  // Deletes specified link.\r  ILink createLink(string aPath);\r  ILink createLink(string[] aPath);\r\r  // Deletes specified link.\r  bool removeLink(string aPath);\r  bool removeLink(string[] aPath);\r}\r",
+		"methods": {},
+		"implements": [],
+		"library": "uim-filesystems"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\interfaces\\collection.d": {
+		"package": "uim.oop.interfaces",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.oop.interfaces.collection",
+		"name": "interface ICollection(T) : IKeyAndPath {\r",
+		"methods": {},
+		"implements": [],
+		"library": "uim-oop"
+	},
 	"IJsonBase": {
 		"origin": "interface IJsonBase : INamed {",
 		"package": "uim.jsonbases.interfaces",
@@ -1762,6 +1922,26 @@
 			"INamed"
 		],
 		"library": "uim-jsonbases"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\interfaces\\comparable.d": {
+		"package": "uim.oop.interfaces",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.oop.interfaces.comparable",
+		"name": "interface IComparable(T) {\r",
+		"methods": {},
+		"implements": [],
+		"library": "uim-oop"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\interfaces\\appendable.d": {
+		"package": "uim.oop.interfaces",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.oop.interfaces.appendable",
+		"name": "interface IAppendable {}",
+		"methods": {},
+		"implements": [],
+		"library": "uim-oop"
 	},
 	"IConsoleApplication": {
 		"origin": "interface IConsoleApplication {",
@@ -1800,6 +1980,16 @@
 		"implements": [
 			"INamed"
 		],
+		"library": "uim-oop"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\interfaces\\closure.d": {
+		"package": "uim.oop.interfaces",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.oop.interfaces.closure",
+		"name": "interface IClosure {\r",
+		"methods": {},
+		"implements": [],
 		"library": "uim-oop"
 	},
 	"ICss": {
@@ -2277,6 +2467,16 @@
 		],
 		"library": "uim-filesystems"
 	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\css\\uim\\css\\interfaces\\css.d": {
+		"package": "uim.css.interfaces",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.css.interfaces.css",
+		"name": "module uim.css.interfaces.css;\r\rimport uim.css;\r\r@safe:\r\rinterface ICss {\r    \r}",
+		"methods": {},
+		"implements": [],
+		"library": "uim-css"
+	},
 	"IAppendable": {
 		"origin": "interface IAppendable {}",
 		"package": "uim.oop.interfaces",
@@ -2287,6 +2487,36 @@
 		"namespace": "uim.oop.interfaces.appendable",
 		"name": "IAppendable",
 		"header": "IAppendable",
+		"methods": {},
+		"implements": [],
+		"library": "uim-oop"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\interfaces\\enumeration.d": {
+		"package": "uim.oop.interfaces",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.oop.interfaces.enumeration",
+		"name": "interface IEnumeration {}",
+		"methods": {},
+		"implements": [],
+		"library": "uim-oop"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\filesystems\\uim\\filesystems\\interfaces\\file.d": {
+		"package": "uim.filesystems.interfaces",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.filesystems.interfaces.file",
+		"name": "module uim.filesystems.interfaces.file;\r\rimport uim.filesystems;\r\r@safe:\r\rinterface IFile : IFilesystemEntry {\r  // #region Properties\r  // Sets or returns the attributes of a specified file.\r  bool isFile();\r\r  size_t attributes();\r  void attributes(size_t newAttributes);\r\r  // Returns the date and time when a specified file was created.\r  long createdOn();\r\r  // Returns the date and time when a specified file was last accessed.\r  long accessedOn();\r\r  // Returns the date and time when a specified file was last modified.\r  long modifiedOn();\r\r  // Returns the drive letter of the drive where a specified file or folder resides.\r  string driveName();\r\r  // Returns the type of a specified file.\r  string type();\r  // #endregion Properties\r\r  // #region Methods\r  void writeContent(const void[] content);\r  void[] readContent(size_t contentSize = size_t.max);\r  void appendContent(const void[] content);\r\r  string readText();\r  void writeText(string aText);\r  void appendText(string aText);\r\r  string[] readLines();\r\r  Json readJson();\r  bool writeJson(Json jsonData);\r\r  // Copies a specified file from one location to another.\r  bool copy(string toPath);\r  bool copy(string[] toPath);\r  bool copy(IFolder toFolder);\r\r  // Moves file from one location to another.\r  bool move(string toPath);\r  bool move(string[] toPath);\r  bool move(IFolder toFolder);\r\r  // Deletes file.\r  bool remove();\r\r  // TODO: OpenAsTextStream   Opens a specified file and returns a TextStream object to access the file.\r  // #endregion Methods\r}\r",
+		"methods": {},
+		"implements": [],
+		"library": "uim-filesystems"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\parsers\\interfaces.d": {
+		"package": "uim.oop.parsers",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.oop.parsers.interfaces",
+		"name": "interface IParser : INamed {\r",
 		"methods": {},
 		"implements": [],
 		"library": "uim-oop"
@@ -2337,6 +2567,36 @@
 		"namespace": "uim.oop.interfaces.container",
 		"name": "IContainer",
 		"header": "IContainer",
+		"methods": {},
+		"implements": [],
+		"library": "uim-oop"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\interfaces\\fixturestrategy.d": {
+		"package": "uim.oop.interfaces",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.oop.interfaces.fixturestrategy",
+		"name": "interface IFixtureStrategy {\r",
+		"methods": {},
+		"implements": [],
+		"library": "uim-oop"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\services\\uim\\services\\interfaces\\service.d": {
+		"package": "uim.services.interfaces",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.services.interfaces.service",
+		"name": "interface IServices {}",
+		"methods": {},
+		"implements": [],
+		"library": "uim-services"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\validators\\interfaces.d": {
+		"package": "uim.oop.validators",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.oop.validators.interfaces",
+		"name": "interface IValidator : INamed {\r",
 		"methods": {},
 		"implements": [],
 		"library": "uim-oop"
@@ -2416,6 +2676,46 @@
 		"implements": [],
 		"library": "uim-oop"
 	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\interfaces\\configengine.d": {
+		"package": "uim.oop.interfaces",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.oop.interfaces.configengine",
+		"name": "interface IConfigEngine {\r",
+		"methods": {},
+		"implements": [],
+		"library": "uim-oop"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\interfaces\\runnable.d": {
+		"package": "uim.oop.interfaces",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.oop.interfaces.runnable",
+		"name": "interface IRunnable {\r",
+		"methods": {},
+		"implements": [],
+		"library": "uim-oop"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\interfaces\\exception.d": {
+		"package": "uim.oop.interfaces",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.oop.interfaces.exception",
+		"name": "interface IException {\r",
+		"methods": {},
+		"implements": [],
+		"library": "uim-oop"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\interfaces\\stringable.d": {
+		"package": "uim.oop.interfaces",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.oop.interfaces.stringable",
+		"name": "interface IStringable {\r",
+		"methods": {},
+		"implements": [],
+		"library": "uim-oop"
+	},
 	"IDrive": {
 		"origin": "interface IDrive : IFilesystemEntry {",
 		"package": "uim.filesystems.interfaces",
@@ -2456,6 +2756,16 @@
 			"IRequestHandler */"
 		],
 		"library": "uim-oop"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\filesystems\\uim\\filesystems\\interfaces\\filemanager.d": {
+		"package": "uim.filesystems.interfaces",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.filesystems.interfaces.filemanager",
+		"name": "module uim.filesystems.interfaces.filemanager;\r\rimport uim.filesystems;\r\r@safe:\rinterface IFileManager {\r  bool hasFiles(string aPathOrName);\r  bool hasFiles(string aPath, string aFileName);\r  bool hasFiles(string[] aPath);\r  bool hasFiles(string[] aPath, string aFileName);\r\r  size_t countFiles(string aPathOrName);\r  size_t countFiles(string aPath, string aFileName);\r  size_t countFiles(string[] aPath);\r  size_t countFiles(string[] aPath, string aFileName);\r\r  IFile[] files();\r  IFile[] files(string aPathOrName);\r  IFile[] files(string aPath, string aFileName);\r  IFile[] files(string[] aPath);\r  IFile[] files(string[] aPath, string aFileName);\r\r  // Returns a File object for a specified path.\r  IFile file(string aPathOrName);\r  IFile file(string aPath, string aFileName);\r  IFile file(string[] aPath);\r  IFile file(string[] aPath, string aFileName);\r\r  bool existsFile(string aPathOrName);\r  bool existsFile(string aPath, string aFileName);\r  bool existsFile(string[] aPath);\r  bool existsFile(string[] aPath, string aFileName);\r\r  bool addFile(IFile aFile);\r\r  IFile createFile(string aPathOrName);\r  IFile createFile(string aPath, string aFileName);\r  IFile createFile(string[] aPath);\r  IFile createFile(string[] aPath, string aFileName);\r\r  bool renameFile(string oldPathAndName, string newName);\r  bool renameFile(string aPath, string oldName, string newName);\r  bool renameFile(string[] oldPathAndName, string newName);\r  bool renameFile(string[] aPath, string oldName, string newName);\r\r  // Copies file from one location to another.\r  bool copyFile(string fromPath, string toPath);\r  bool copyFile(string[] fromPath, string[] toPath);\r\r  // Moves one or more files from one location to another.\r  bool moveFile(string fromPath, string toPath);\r  bool moveFile(string[] fromPath, string[] toPath);\r\r  // Checks if a specified file exists. False, ifsomeFiles is empty\r  final bool filesExists(IFile[] files) {\r    if (files.isEmpty) { return false; }\r\r    return files.all!(file => file.exists);\r  }\r\r  bool removeFile(string aPath);\r  bool removeFile(string aPath, string aFolderName);\r  bool removeFile(string[] aPath);\r  bool removeFile(string[] aPath, string aFolderName);\r}",
+		"methods": {},
+		"implements": [],
+		"library": "uim-filesystems"
 	},
 	"ILink": {
 		"origin": "interface ILink : IFilesystemEntry {",
@@ -2501,6 +2811,16 @@
 			"IFilesystemEntry"
 		],
 		"library": "uim-filesystems"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\commands\\interfaces.d": {
+		"package": "uim.oop.commands",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.oop.commands.interfaces",
+		"name": "interface ICommand : INamed {\r",
+		"methods": {},
+		"implements": [],
+		"library": "uim-oop"
 	},
 	"IException": {
 		"origin": "interface IException {",
@@ -2883,6 +3203,16 @@
 		"implements": [],
 		"library": "uim-oop"
 	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\interfaces\\configurable.d": {
+		"package": "uim.oop.interfaces",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.oop.interfaces.configurable",
+		"name": "interface IConfigurable {\r",
+		"methods": {},
+		"implements": [],
+		"library": "uim-oop"
+	},
 	"ITest": {
 		"origin": "    interface ITest {",
 		"package": "uim.core.helpers",
@@ -3159,6 +3489,56 @@
 		],
 		"library": "uim-oop"
 	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\jsonbases\\uim\\jsonbases\\interfaces\\collection.d": {
+		"package": "uim.jsonbases.interfaces",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.jsonbases.interfaces.collection",
+		"name": "module uim.jsonbases.interfaces.collection;\r\rimport uim.jsonbases;\r\r@safe:\rinterface IJsonCollection : INamed {  \r  // #region READ\r    // #region findMany()\r      Json[] findMany(bool allVersions = false);\r      Json[] findMany(UUID[] ids, bool allVersions = false);\r      Json[] findMany(UUID id, bool allVersions = false);\r      Json[] findMany(UUID[] ids, size_t versionNumber);\r\r      Json[] findMany(string[string][] selects, bool allVersions = false);\r      Json[] findMany(string[string] select, bool allVersions = false);\r      Json[] findMany(Json[] selects, bool allVersions = false);\r      Json[] findMany(Json select, bool allVersions = false);\r    // #endregion findMany() \r\r    // #region findOne()\r      Json findOne(UUID[] ids, bool allVersions = false);\r      Json findOne(UUID id, bool allVersions = false);\r      Json findOne(UUID[] ids, size_t versionNumber);\r      Json findOne(UUID id, size_t versionNumber);\r\r      Json findOne(string[string][] selects, bool allVersions = false);\r      Json findOne(string[string] select, bool allVersions = false);\r      Json findOne(Json[] selects, bool allVersions = false);\r      Json findOne(Json select, bool allVersions = false);\r    // #endregion findOne()\r  // #endregion READ                            \r\r  // #region UPDATE\r    // #region updateMany()\r      size_t updateMany(string[string] select, string[string] updateData);\r      size_t updateMany(string[string] select, Json updateData);\r      \r      size_t updateMany(Json select, string[string] updateData);\r      size_t updateMany(Json select, Json updateData);\r    // #endregion updateMany()\r\r    // #region updateOne()\r      bool updateOne(string[string] select, string[string] updateData);\r      bool updateOne(string[string] select, Json updateData);\r      bool updateOne(Json select, string[string] updateData);\r      abstract bool updateOne(Json select, Json updateData);\r    // #endregion updateOne()\r  // #endregion UPDATE                                                                 \r}                                                                                                                                                                                                               ",
+		"methods": {},
+		"implements": [],
+		"library": "uim-jsonbases"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\interfaces\\cloneable.d": {
+		"package": "uim.oop.interfaces",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.oop.interfaces.cloneable",
+		"name": "interface ICloneable {\r",
+		"methods": {},
+		"implements": [],
+		"library": "uim-oop"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\interfaces\\httpapplication.d": {
+		"package": "uim.oop.interfaces",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.oop.interfaces.httpapplication",
+		"name": "interface IHttpApplication /* : IRequestHandler */ {",
+		"methods": {},
+		"implements": [],
+		"library": "uim-oop"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\formatters\\interfaces.d": {
+		"package": "uim.oop.formatters",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.oop.formatters.interfaces",
+		"name": "interface IFormatter : INamed {\r",
+		"methods": {},
+		"implements": [],
+		"library": "uim-oop"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\interfaces\\consoleapplication.d": {
+		"package": "uim.oop.interfaces",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.oop.interfaces.consoleapplication",
+		"name": "interface IConsoleApplication {\r",
+		"methods": {},
+		"implements": [],
+		"library": "uim-oop"
+	},
 	"IClosure": {
 		"origin": "interface IClosure {",
 		"package": "uim.oop.interfaces",
@@ -3173,6 +3553,16 @@
 		"implements": [],
 		"library": "uim-oop"
 	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\interfaces\\map.d": {
+		"package": "uim.oop.interfaces",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.oop.interfaces.map",
+		"name": "interface IMap {\r",
+		"methods": {},
+		"implements": [],
+		"library": "uim-oop"
+	},
 	"IEnumeration": {
 		"origin": "interface IEnumeration {}",
 		"package": "uim.oop.interfaces",
@@ -3181,6 +3571,46 @@
 		"namespace": "uim.oop.interfaces.enumeration",
 		"name": "IEnumeration",
 		"header": "IEnumeration",
+		"methods": {},
+		"implements": [],
+		"library": "uim-oop"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\entitybases\\uim\\entitybases\\interfaces\\base.d": {
+		"package": "uim.entitybases.interfaces",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.entitybases.interfaces.base",
+		"name": "module uim.entitybases.interfaces.base;\r\rimport uim.entitybases;\r\r@safe:\r\rinterface IEntityBase {\r}\r",
+		"methods": {},
+		"implements": [],
+		"library": "uim-entitybases"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\interfaces\\pluginapplication.d": {
+		"package": "uim.oop.interfaces",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.oop.interfaces.pluginapplication",
+		"name": "interface IPluginApplication /* : IEventDispatcher */ { // TODO",
+		"methods": {},
+		"implements": [],
+		"library": "uim-oop"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\filesystems\\uim\\filesystems\\interfaces\\drive.d": {
+		"package": "uim.filesystems.interfaces",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.filesystems.interfaces.drive",
+		"name": "module uim.filesystems.interfaces.drive;\r\rimport uim.filesystems;\r\r@safe:\rinterface IDrive : IFilesystemEntry {\r}",
+		"methods": {},
+		"implements": [],
+		"library": "uim-filesystems"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\configurations\\interfaces.d": {
+		"package": "uim.oop.configurations",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.oop.configurations.interfaces",
+		"name": "interface IConfiguration : INamed {",
 		"methods": {},
 		"implements": [],
 		"library": "uim-oop"
@@ -3231,6 +3661,46 @@
 		},
 		"implements": [],
 		"library": "uim-oop"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\filesystems\\uim\\filesystems\\interfaces\\filesystem.d": {
+		"package": "uim.filesystems.interfaces",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.filesystems.interfaces.filesystem",
+		"name": "module uim.filesystems.interfaces.filesystem;\r\rimport uim.filesystems;\r\r@safe:\r\rinterface IFilesystem : IFolderManager, IFileManager, ILinkManager {\r  // #region Properties\r  // Returns rootPath of filesystem\r  string rootPath();\r\r  // Sets or returns the path of the filesystem\r  string[] path();\r  void path(string[] path);\r\r  // Returns information about type of filsystem\r  string type();\r\r  // Returns the size, in bytes, of the filesystem\r  size_t size();\r\r  // Returns the size, in bytes, of the filesystem\r  size_t capacity();\r\r  IFolder rootFolder();\r  IFilesystem filesystem();\r  string pathSeparator();\r  size_t availableDiskSpace();\r\r  bool isHidden(string aPath);\r  bool isHidden(string aPath, string aFolderName);\r  bool isHidden(string[] aPath);\r  bool isHidden(string[] aPath, string aFolderName);\r\r  string relPath(string aPath);\r  string relPath(string[] aPath);\r\r  string absolutePath(string aPath);\r  string absolutePath(string[] aPath);\r  // #endregion Properties\r\r  bool isFolder(string aPath);\r  bool isFolder(string aPath, string aFolderName);\r  bool isFolder(string[] aPath);\r  bool isFolder(string[] aPath, string aFolderName);\r\r  // Check if entry is file\r  bool isFile(string aPath);\r  bool isFile(string aPath, string aFolderName);\r  bool isFile(string[] aPath);\r  bool isFile(string[] aPath, string aFolderName);\r\r  void[] readFromFile(string[] aPath, string aFileName, size_t numberOfBytes = size_t.max);\r\r  void writeToFile(string[] aPath, string aFileName, const void[] buffer);\r\r  void appendToFile(string[] aPath, string aFileName, const void[] buffer);\r\r  string readTextFromFile(string[] aPath, string aFileName);\r\r  void writeTextToFile(string[] aPath, string aFileName, string aText);\r\r  void appendTextToFile(string[] aPath, string aFileName, string aText);\r\r  string[] readLines(string[] aPath, string aFileName);\r\r  // Check if entry is link\r  bool isLink(string aPath);\r  bool isLink(string aPath, string aFolderName);\r  bool isLink(string[] aPath);\r  bool isLink(string[] aPath, string aFolderName);\r}\r",
+		"methods": {},
+		"implements": [],
+		"library": "uim-filesystems"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\interfaces\\iterable.d": {
+		"package": "uim.oop.interfaces",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.oop.interfaces.iterable",
+		"name": "interface IIterable(T) {\r",
+		"methods": {},
+		"implements": [],
+		"library": "uim-oop"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\interfaces\\container.d": {
+		"package": "uim.oop.interfaces",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.oop.interfaces.container",
+		"name": "interface IContainer { // TODO: IDefinitionContainer {\r",
+		"methods": {},
+		"implements": [],
+		"library": "uim-oop"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\jsonbases\\uim\\jsonbases\\interfaces\\collectionmanager.d": {
+		"package": "uim.jsonbases.interfaces",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.jsonbases.interfaces.collectionmanager",
+		"name": "module uim.jsonbases.interfaces.collectionmanager;\r\rimport uim.jsonbases;\r\r@safe:\rinterface IJsonCollectionManager {  \r  // Collections\r  bool hasCollections(string[] someNames...); \r  bool hasCollections(string[] someNames = null); \r  size_t countCollections(string[] someNames...); \r  size_t countCollections(string[] someNames = null); \r  string[] existingCollections(string[] someNames...); \r  string[] existingCollections(string[] someNames = null); \r  string[] collectionNames(); \r  IJsonCollection[] collections(); \r\r  // Collection\r  bool hasCollection(string aName); \r  IJsonCollection collection(string aName); \r\r  // Add collections\r  bool addCollections(IJsonCollection[] someCollections...); \r  bool addCollections(IJsonCollection[] someCollections); \r  bool addCollections(IJsonCollection[string] someCollections); \r\r  // Add collection\r  bool addCollection(IJsonCollection aCollection); \r  bool addCollection(string aName, IJsonCollection aCollection); \r\r  // Create Collections\r  IJsonCollection[] createCollections(string[] someNames...); \r  IJsonCollection[] createCollections(string[] someNames); \r\r  IJsonCollection createCollection(string aName); \r\r  // Delete\r  bool deleteCollections(string[] someNames...); \r  bool deleteCollections(string[] someNames);\r\r  bool deleteCollection(string aName); \r}",
+		"methods": {},
+		"implements": [],
+		"library": "uim-jsonbases"
 	},
 	"ILinkManager": {
 		"origin": "interface ILinkManager {",
@@ -3545,6 +4015,16 @@
 				"isStatic": false
 			}
 		},
+		"implements": [],
+		"library": "uim-oop"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\errors\\interfaces.d": {
+		"package": "uim.oop.errors",
+		"visibility": "public",
+		"comments": [],
+		"namespace": "uim.oop.errors.interfaces",
+		"name": "interface IError {\r",
+		"methods": {},
 		"implements": [],
 		"library": "uim-oop"
 	},
