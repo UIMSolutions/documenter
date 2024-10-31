@@ -11,6 +11,7 @@ public {
     import lib.collectors.exceptions;
     import lib.collectors.factories;
     import lib.collectors.files;
+    import lib.collectors.findings;
     import lib.collectors.interfaces;
     import lib.collectors.libraries;
     import lib.collectors.methods;

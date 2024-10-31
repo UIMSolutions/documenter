@@ -11,7 +11,7 @@ class DCollector {
 
     Json create(string name) {
         Json defaults = Json.emptyObject;
-        
+
         return defaults
             .set("name", name)
             .set("comments", Json.emptyArray);
@@ -28,8 +28,7 @@ class DCollector {
             .array;
 
         return findings.length > 0
-            ? findings[0]
-            : Json(null);
+            ? findings[0] : Json(null);
     }
 
     void set(Json info) {
@@ -37,6 +36,14 @@ class DCollector {
     }
 
     void set(string name, Json info) {
+        if (name in _infos) {
+            Json finding = Json(createMap!(string, Json)
+                    .set("name", name)
+                    .set("category", this.classname)
+                    .set("message", "name exists"));
+
+            Findings.set(name, finding);
+        }
         _infos[name] = info;
     }
 

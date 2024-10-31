@@ -68,6 +68,8 @@ void main() {
 	Factories.save;
 	Registries.save;
 
+	Findings.save;
+
 	/* 	foreach (key, value; files.byKeyValue) {
 		string namespace = value["namespace"].get!string;
 		tree.addNamespace(namespace);
