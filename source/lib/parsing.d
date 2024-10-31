@@ -805,6 +805,8 @@ void readDFiles(string path) {
     auto files = getFilesInPath(path, ".d");
 
     files.each!((file) {
+        Files.set(file);        
+
         if (file.isModuleFile) {
             parseModule(file);
         }
@@ -826,10 +828,14 @@ void readDFiles(string path) {
 
 // #region sdl
 void readSdlFiles(string path) {
-    foreach (file; getFilesInPath(path, ".sdl")) {
+    foreach (file; getFilesInPath(path, ".sdl")) {   
         auto lines = file.readFileByLine;
-        auto library = Libraries.getWith("name", sdlName(lines));
+        auto name = sdlName(lines);
+        if (name.isEmpty) continue;
+
+        auto library = Libraries.create(name);
         if (library != Json(null)) { // found
+            debug writeln("Found ", file.name);     
             library["license"] = sdlLicense(lines);
             library["dependencies"] = Json.emptyArray;
             library["dependencies"] = sdlDependencies(lines).map!(item => Json(item)).array;

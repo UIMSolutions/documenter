@@ -21,15 +21,15 @@ class DCollector {
         return _infos.get(name, Json(null));
     }
 
-    Json getWith(string key, string value) {
+/*     Json getWith(string key, string value) {
         auto findings = _infos.byKeyValue
             .map!(info => info.value)
-            .filter!(info => info.getString(key) == value)
+            .filter!(infoValue => infoValue.getString(key) == value)
             .array;
 
         return findings.length > 0
             ? findings[0] : Json(null);
-    }
+    } */
 
     void set(Json info) {
         _infos[info.getString("name")] = info;

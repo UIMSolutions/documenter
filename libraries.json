@@ -1,1 +1,501 @@
-{}
+{
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\controllers\\dub.sdl": {
+		"dependencies": [
+			"colored",
+			"vibe-d",
+			"uim:core",
+			"uim:models",
+			"uim:oop",
+			"uim:views"
+		],
+		"comments": [],
+		"license": "Apache-2.0",
+		"name": "uim-controllers"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\ai\\dub.sdl": {
+		"dependencies": [
+			"colored",
+			"vibe-d",
+			"uim:core",
+			"uim:oop"
+		],
+		"comments": [],
+		"license": "Apache-2.0",
+		"name": "uim-ai"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\css\\dub.sdl": {
+		"dependencies": [
+			"colored",
+			"vibe-d",
+			"uim:core",
+			"uim:oop"
+		],
+		"comments": [],
+		"license": "Apache-2.0",
+		"name": "uim-css"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\jsonbases\\dub.sdl": {
+		"dependencies": [
+			"colored",
+			"vibe-d",
+			"uim:core",
+			"uim:oop",
+			"uim:filesystems"
+		],
+		"comments": [],
+		"license": "Apache-2.0",
+		"name": "uim-jsonbases"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\filesystems\\dub.sdl": {
+		"dependencies": [
+			"colored",
+			"vibe-d",
+			"uim:core",
+			"uim:oop"
+		],
+		"comments": [],
+		"license": "Apache-2.0",
+		"name": "uim-filesystems"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\dub.sdl": {
+		"dependencies": [
+			"colored",
+			"vibe-d",
+			"uim:core"
+		],
+		"comments": [],
+		"license": "Apache-2.0",
+		"name": "uim-oop"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\http\\dub.sdl": {
+		"dependencies": [
+			"colored",
+			"vibe-d",
+			"uim:core",
+			"uim:oop"
+		],
+		"comments": [],
+		"license": "Apache-2.0",
+		"name": "uim-http"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\routings\\dub.sdl": {
+		"dependencies": [
+			"colored",
+			"vibe-d",
+			"uim:core",
+			"uim:oop"
+		],
+		"comments": [],
+		"license": "Apache-2.0",
+		"name": "uim-routings"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\networks\\dub.sdl": {
+		"dependencies": [
+			"colored",
+			"vibe-d",
+			"uim:core",
+			"uim:oop"
+		],
+		"comments": [],
+		"license": "Apache-2.0",
+		"name": "uim-networks"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\genetics\\dub.sdl": {
+		"dependencies": [
+			"colored",
+			"vibe-d",
+			"uim:core",
+			"uim:oop",
+			"uim:models"
+		],
+		"comments": [],
+		"license": "Apache-2.0",
+		"name": "uim-genetics"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\gui\\dub.sdl": {
+		"dependencies": [
+			"colored",
+			"vibe-d",
+			"uim:core",
+			"uim:oop",
+			"uim:filesystems",
+			"uim:models"
+		],
+		"comments": [],
+		"license": "Apache-2.0",
+		"name": "uim-gui"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\dub.sdl": {
+		"dependencies": [
+			":ai",
+			":apps",
+			":caches",
+			":collections",
+			":commands",
+			":consoles",
+			":controllers",
+			":core",
+			":css",
+			":databases",
+			":datasources",
+			":entitybases",
+			":errors",
+			":events",
+			":filesystems",
+			":forms",
+			":genetics",
+			":gui",
+			":html",
+			":http",
+			":i18n",
+			":jsonbases",
+			":languages",
+			":logging",
+			":mails",
+			":models",
+			":mvc",
+			":networks",
+			":neural",
+			":oop",
+			":orm",
+			":routings",
+			":scriptings",
+			":securities",
+			":servers",
+			":services",
+			":sites",
+			":validations",
+			":views",
+			":web"
+		],
+		"comments": [],
+		"license": "Apache-2.0",
+		"name": "uim"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\mails\\dub.sdl": {
+		"dependencies": [
+			"colored",
+			"vibe-d",
+			"uim:core",
+			"uim:oop"
+		],
+		"comments": [],
+		"license": "Apache-2.0",
+		"name": "uim-mails"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\sites\\dub.sdl": {
+		"dependencies": [
+			"colored",
+			"vibe-d",
+			"uim:core",
+			"uim:oop"
+		],
+		"comments": [],
+		"license": "Apache-2.0",
+		"name": "uim-sites"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\commands\\dub.sdl": {
+		"dependencies": [
+			"colored",
+			"vibe-d",
+			"uim:core",
+			"uim:oop"
+		],
+		"comments": [],
+		"license": "Apache-2.0",
+		"name": "uim-commands"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\databases\\dub.sdl": {
+		"dependencies": [
+			"colored",
+			"vibe-d",
+			"uim:core",
+			"uim:oop",
+			"uim:consoles",
+			"uim:logging"
+		],
+		"comments": [],
+		"license": "Apache-2.0",
+		"name": "uim-databases"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\html\\dub.sdl": {
+		"dependencies": [
+			"colored",
+			"vibe-d",
+			"uim:core",
+			"uim:oop",
+			"uim:models",
+			"uim:css"
+		],
+		"comments": [],
+		"license": "Apache-2.0",
+		"name": "uim-html"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\i18n\\dub.sdl": {
+		"dependencies": [
+			"colored",
+			"vibe-d",
+			"uim:core",
+			"uim:oop"
+		],
+		"comments": [],
+		"license": "Apache-2.0",
+		"name": "uim-i18n"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\datasources\\dub.sdl": {
+		"dependencies": [
+			"colored",
+			"vibe-d",
+			"uim:oop"
+		],
+		"comments": [],
+		"license": "Apache-2.0",
+		"name": "uim-datasources"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\events\\dub.sdl": {
+		"dependencies": [
+			"colored",
+			"vibe-d",
+			"uim:core",
+			"uim:oop"
+		],
+		"comments": [],
+		"license": "Apache-2.0",
+		"name": "uim-events"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\views\\dub.sdl": {
+		"dependencies": [
+			"colored",
+			"vibe-d",
+			"uim:core",
+			"uim:oop"
+		],
+		"comments": [],
+		"license": "Apache-2.0",
+		"name": "uim-views"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\forms\\dub.sdl": {
+		"dependencies": [
+			"colored",
+			"vibe-d",
+			"uim:core",
+			"uim:oop"
+		],
+		"comments": [],
+		"license": "Apache-2.0",
+		"name": "uim-forms"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\scriptings\\dub.sdl": {
+		"dependencies": [
+			"colored",
+			"vibe-d",
+			"uim:core",
+			"uim:oop"
+		],
+		"comments": [],
+		"license": "Apache-2.0",
+		"name": "uim-scriptings"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\core\\dub.sdl": {
+		"dependencies": [
+			"vibe-d",
+			"colored"
+		],
+		"comments": [],
+		"license": "Apache-2.0",
+		"name": "uim-core"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\services\\dub.sdl": {
+		"dependencies": [
+			"colored",
+			"vibe-d",
+			"uim:core",
+			"uim:oop"
+		],
+		"comments": [],
+		"license": "Apache-2.0",
+		"name": "uim-services"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\logging\\dub.sdl": {
+		"dependencies": [
+			"colored",
+			"vibe-d",
+			"uim:core",
+			"uim:oop",
+			"uim:consoles"
+		],
+		"comments": [],
+		"license": "Apache-2.0",
+		"name": "uim-logging"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\orm\\dub.sdl": {
+		"dependencies": [
+			"colored",
+			"vibe-d",
+			"uim:core",
+			"uim:oop"
+		],
+		"comments": [],
+		"license": "Apache-2.0",
+		"name": "uim-orm"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\models\\dub.sdl": {
+		"dependencies": [
+			"colored",
+			"vibe-d",
+			"uim:core",
+			"uim:oop"
+		],
+		"comments": [],
+		"license": "Apache-2.0",
+		"name": "uim-models"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\entitybases\\dub.sdl": {
+		"dependencies": [
+			"colored",
+			"vibe-d",
+			"uim:core",
+			"uim:oop",
+			"uim:filesystems",
+			"uim:models"
+		],
+		"comments": [],
+		"license": "Apache-2.0",
+		"name": "uim-entitybases"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\validations\\dub.sdl": {
+		"dependencies": [
+			"colored",
+			"vibe-d",
+			"uim:core",
+			"uim:oop"
+		],
+		"comments": [],
+		"license": "Apache-2.0",
+		"name": "uim-validations"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\mvc\\dub.sdl": {
+		"dependencies": [
+			"colored",
+			"vibe-d",
+			"uim:core",
+			"uim:oop"
+		],
+		"comments": [],
+		"license": "Apache-2.0",
+		"name": "uim-mvc"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\securities\\dub.sdl": {
+		"dependencies": [
+			"colored",
+			"vibe-d",
+			"uim:core",
+			"uim:oop"
+		],
+		"comments": [],
+		"license": "Apache-2.0",
+		"name": "uim-securities"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\errors\\dub.sdl": {
+		"dependencies": [
+			"colored",
+			"vibe-d",
+			"uim:core",
+			"uim:oop"
+		],
+		"comments": [],
+		"license": "Apache-2.0",
+		"name": "uim-errors"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\languages\\dub.sdl": {
+		"dependencies": [
+			"colored",
+			"vibe-d",
+			"uim:core",
+			"uim:oop",
+			"uim:filesystems",
+			"uim:models"
+		],
+		"comments": [],
+		"license": "Apache-2.0",
+		"name": "uim-languages"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\consoles\\dub.sdl": {
+		"dependencies": [
+			"colored",
+			"vibe-d",
+			"uim:oop"
+		],
+		"comments": [],
+		"license": "Apache-2.0",
+		"name": "uim-consoles"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\apps\\dub.sdl": {
+		"dependencies": [
+			"colored",
+			"vibe-d",
+			"uim:core",
+			"uim:oop"
+		],
+		"comments": [],
+		"license": "Apache-2.0",
+		"name": "uim-apps"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\neural\\dub.sdl": {
+		"dependencies": [
+			"colored",
+			"vibe-d",
+			"uim:core",
+			"uim:oop"
+		],
+		"comments": [],
+		"license": "Apache-2.0",
+		"name": "uim-neural"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\servers\\dub.sdl": {
+		"dependencies": [
+			"colored",
+			"vibe-d",
+			"uim:core",
+			"uim:oop"
+		],
+		"comments": [],
+		"license": "Apache-2.0",
+		"name": "uim-servers"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\caches\\dub.sdl": {
+		"dependencies": [
+			"colored",
+			"vibe-d",
+			"uim:core",
+			"uim:oop"
+		],
+		"comments": [],
+		"license": "Apache-2.0",
+		"name": "uim-caches"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\collections\\dub.sdl": {
+		"dependencies": [
+			"colored",
+			"vibe-d",
+			"uim:core",
+			"uim:oop"
+		],
+		"comments": [],
+		"license": "Apache-2.0",
+		"name": "uim-collections"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\web\\dub.sdl": {
+		"dependencies": [
+			"colored",
+			"vibe-d",
+			"uim:core",
+			"uim:oop",
+			"uim:filesystems",
+			"uim:models"
+		],
+		"comments": [],
+		"license": "Apache-2.0",
+		"name": "uim-web"
+	}
+}
