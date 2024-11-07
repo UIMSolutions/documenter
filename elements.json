@@ -1,1 +1,22 @@
-{}
+{
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\html\\uim\\html\\classes\\elements\\element.d": {
+		"origin": "class DH5Element : DH5Obj {",
+		"isFinal": false,
+		"package": "",
+		"visibility": "public",
+		"comments": [],
+		"name": "DH5Element",
+		"isAbstract": false,
+		"namespace": "",
+		"isInherited": false,
+		"methods": {},
+		"hasParent": false,
+		"implements": [
+			"DH5Obj"
+		],
+		"isStatic": false,
+		"library": "",
+		"header": "DH5Element : DH5Obj",
+		"parent": "DH5Obj"
+	}
+}

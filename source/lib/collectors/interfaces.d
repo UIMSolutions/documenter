@@ -18,34 +18,53 @@ class DInterfaces : DCollector {
             .set("methods", Json.emptyObject);
     }
 
-    alias parse = lib.collectors.collector.DCollector.parse;
-    override void parse(DirEntry file) {
+    override void parseFile(DirEntry file) {
         string path = file.name;
         auto lines = readFileLines(path);
         if (!lines.isInterface)
             return;
 
-        string line;
-        size_t cursor;
-        foreach (i, l; lines) {
-            if (l.strip.startsWith(["//", "/*", "*", "/+"]))
-                continue;
+        size_t cursor = findHeaderPos(lines, "interface ");
+        string line = lines[cursor];
+        Json info = create(line);
+        info = parseData(info, lines);
+        info = copyFileInfo(info, path);
 
-            if (l.contains("interface ")) {
-                cursor = i;
-                line = l;
-                break;
+        info.parseComments(lines, cursor);
+        info["origin"] = line;
+
+        info = parseHeader(info, line);
+        if (lines.length > cursor+1) {
+            auto intendLines = lines[cursor .. $].filter!(line => line.intendation > 0).array;
+            if (intendLines.length > 0) {
+                auto minIntend = intendLines.map!(line => line.intendation).minElement;
+                intendLines
+                    .filter!(line => line.intendation == minIntend)
+                    .map!(line => line.replace(";", "").strip)
+                    .filter!(line => !line.startsWith(["//", "/*"]))
+                    .filter!(line => line.containsAll(["(", ")"]))
+                    .each!(line => info["methods"][line] = parseInterfaceMethod(line));
             }
         }
 
-        if (line.isEmpty)
-            return;
+        set(path, info);
+    }
 
-        Json info = create(line);
-        info = parseData(info, lines);
-        /* fileInfo.byKeyValue.each!(item => info[item.key] = item.value);
-        info.parseComments(lines, cursor);        
-        info["origin"] = line;
+    Json parseData(Json info, string[] lines) {
+        if (info.isNull)
+            info = Json.emptyObject;
+        info["namespace"] = namespace(lines);
+        info["library"] = libraryName(info.getString("namespace"));
+        info["package"] = packageName(info.getString("namespace"));
+        return info;
+    }
+
+    Json parseHeader(Json info, string line) {
+        if (info.isNull)
+            info = Json.emptyObject;
+
+        if (line.isEmpty)
+            return info;
 
         line = line.contains("//") ? line.split("//")[0].strip : line;
         line = line.replace("{}", "").replace("{", "").replace("interface", "").strip;
@@ -64,27 +83,6 @@ class DInterfaces : DCollector {
             info["name"] = line;
         }
 
-        if (lines.length > cursor) {
-            auto intendLines = lines[cursor .. $].filter!(line => line.intendation > 0).array;
-            if (intendLines.length > 0) {
-                auto minIntend = intendLines.map!(line => line.intendation).minElement;
-                intendLines
-                    .filter!(line => line.intendation == minIntend)
-                    .map!(line => line.replace(";", "").strip)
-                    .filter!(line => !line.startsWith(["//", "/*"]))
-                    .filter!(line => line.containsAll(["(", ")"]))
-                    .each!(line => info["methods"][line] = parseInterfaceMethod(line));
-            }
-        } */
-
-        set(path, info);
-    }
-
-    Json parseData(Json info, string[] lines) {
-        if (info.isNull) info = Json.emptyObject;
-        info["namespace"] = namespace(lines);
-        info["library"] = libraryName(info.getString("namespace"));
-        info["package"] = packageName(info.getString("namespace"));
         return info;
     }
 }

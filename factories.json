@@ -1,1 +1,142 @@
-{}
+{
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\parsers\\factory.d": {
+		"origin": "class DParserFactory : DFactory!DParser {}\r",
+		"isFinal": false,
+		"package": "uim.oop.parsers",
+		"visibility": "public",
+		"comments": [],
+		"name": "DParserFactory",
+		"isAbstract": false,
+		"namespace": "uim.oop.parsers.factory",
+		"isInherited": false,
+		"methods": {},
+		"hasParent": false,
+		"implements": [
+			"DFactory!DParser"
+		],
+		"isStatic": false,
+		"library": "uim-oop",
+		"header": "DParserFactory : DFactory!DParser",
+		"parent": "DFactory!DParser"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\formatters\\factory.d": {
+		"origin": "class DFormatterFactory : DFactory!DFormatter {\r",
+		"isFinal": false,
+		"package": "uim.oop.formatters",
+		"visibility": "public",
+		"comments": [],
+		"name": "DFormatterFactory",
+		"isAbstract": false,
+		"namespace": "uim.oop.formatters.factory",
+		"isInherited": false,
+		"methods": {},
+		"hasParent": false,
+		"implements": [
+			"DFactory!DFormatter"
+		],
+		"isStatic": false,
+		"library": "uim-oop",
+		"header": "DFormatterFactory : DFactory!DFormatter",
+		"parent": "DFactory!DFormatter"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\errors\\factory.d": {
+		"origin": "class DErrorFactory : DFactory!UIMError {",
+		"isFinal": false,
+		"package": "uim.oop.errors",
+		"visibility": "public",
+		"comments": [],
+		"name": "DErrorFactory",
+		"isAbstract": false,
+		"namespace": "uim.oop.errors.factory",
+		"isInherited": false,
+		"methods": {},
+		"hasParent": false,
+		"implements": [
+			"DFactory!UIMError"
+		],
+		"isStatic": false,
+		"library": "uim-oop",
+		"header": "DErrorFactory : DFactory!UIMError",
+		"parent": "DFactory!UIMError"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\commands\\factory.d": {
+		"origin": "class DCommandFactory : DFactory!DCommand {\r",
+		"isFinal": false,
+		"package": "uim.oop.commands",
+		"visibility": "public",
+		"comments": [],
+		"name": "DCommandFactory",
+		"isAbstract": false,
+		"namespace": "uim.oop.commands.factory",
+		"isInherited": false,
+		"methods": {},
+		"hasParent": false,
+		"implements": [
+			"DFactory!DCommand"
+		],
+		"isStatic": false,
+		"library": "uim-oop",
+		"header": "DCommandFactory : DFactory!DCommand",
+		"parent": "DFactory!DCommand"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\models\\uim\\models\\classes\\attributes\\factory.d": {
+		"origin": "class DAttributeFactory : DFactory!DAttribute {\r",
+		"isFinal": false,
+		"package": "uim.models.classes.attributes",
+		"visibility": "public",
+		"comments": [],
+		"name": "DAttributeFactory",
+		"isAbstract": false,
+		"namespace": "uim.models.classes.attributes.factory",
+		"isInherited": false,
+		"methods": {},
+		"hasParent": false,
+		"implements": [
+			"DFactory!DAttribute"
+		],
+		"isStatic": false,
+		"library": "uim-models",
+		"header": "DAttributeFactory : DFactory!DAttribute",
+		"parent": "DFactory!DAttribute"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\validators\\factory.d": {
+		"origin": "class DValidatorFactory : DFactory!DUIMValidator {}\r",
+		"isFinal": false,
+		"package": "uim.oop.validators",
+		"visibility": "public",
+		"comments": [],
+		"name": "DValidatorFactory",
+		"isAbstract": false,
+		"namespace": "uim.oop.validators.factory",
+		"isInherited": false,
+		"methods": {},
+		"hasParent": false,
+		"implements": [
+			"DFactory!DUIMValidator"
+		],
+		"isStatic": false,
+		"library": "uim-oop",
+		"header": "DValidatorFactory : DFactory!DUIMValidator",
+		"parent": "DFactory!DUIMValidator"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\controllers\\uim\\controllers\\classes\\controllers\\factory.d": {
+		"origin": "class DControllerFactory : DFactory!DController { ",
+		"isFinal": false,
+		"package": "uim.controllers.classes.controllers",
+		"visibility": "public",
+		"comments": [],
+		"name": "DControllerFactory",
+		"isAbstract": false,
+		"namespace": "uim.controllers.classes.controllers.factory",
+		"isInherited": false,
+		"methods": {},
+		"hasParent": false,
+		"implements": [
+			"DFactory!DController"
+		],
+		"isStatic": false,
+		"library": "uim-controllers",
+		"header": "DControllerFactory : DFactory!DController",
+		"parent": "DFactory!DController"
+	}
+}

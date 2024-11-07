@@ -1,1 +1,109 @@
-{}
+{
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\services\\uim\\services\\exceptions\\exception.d": {
+		"origin": "class DServiceException : UIMException {\r",
+		"isFinal": false,
+		"package": "uim.services.exceptions",
+		"visibility": "public",
+		"comments": [
+			"Service exception."
+		],
+		"name": "DServiceException",
+		"isAbstract": false,
+		"namespace": "uim.services.exceptions.exception",
+		"isInherited": false,
+		"methods": {},
+		"hasParent": false,
+		"implements": [
+			"UIMException"
+		],
+		"isStatic": false,
+		"library": "uim-services",
+		"header": "DServiceException : UIMException",
+		"parent": ""
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\genetics\\uim\\genetics\\exceptions\\exception.d": {
+		"origin": "class DGeneticsException : UIMException {\r",
+		"isFinal": false,
+		"package": "uim.genetics.exceptions",
+		"visibility": "public",
+		"comments": [],
+		"name": "DGeneticsException",
+		"isAbstract": false,
+		"namespace": "uim.genetics.exceptions.exception",
+		"isInherited": false,
+		"methods": {},
+		"hasParent": false,
+		"implements": [
+			"UIMException"
+		],
+		"isStatic": false,
+		"library": "uim-genetics",
+		"header": "DGeneticsException : UIMException",
+		"parent": ""
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\exceptions\\exception.d": {
+		"origin": "class UIMException : Exception, IException {",
+		"isFinal": false,
+		"package": "uim.oop.exceptions",
+		"visibility": "public",
+		"comments": [],
+		"name": "UIMException",
+		"isAbstract": false,
+		"namespace": "uim.oop.exceptions.exception",
+		"isInherited": false,
+		"methods": {},
+		"hasParent": false,
+		"implements": [
+			"Exception",
+			"IException"
+		],
+		"isStatic": false,
+		"library": "uim-oop",
+		"header": "UIMException : Exception, IException",
+		"parent": ""
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\languages\\uim\\languages\\exceptions\\exception.d": {
+		"origin": "class DLanguagesException : UIMException {\r",
+		"isFinal": false,
+		"package": "uim.languages.exceptions",
+		"visibility": "public",
+		"comments": [
+			"I18n exception."
+		],
+		"name": "DLanguagesException",
+		"isAbstract": false,
+		"namespace": "uim.languages.exceptions.exception",
+		"isInherited": false,
+		"methods": {},
+		"hasParent": false,
+		"implements": [
+			"UIMException"
+		],
+		"isStatic": false,
+		"library": "uim-languages",
+		"header": "DLanguagesException : UIMException",
+		"parent": ""
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\helpers\\exceptions\\xml.d": {
+		"origin": "class XmlException : UIMException {",
+		"isFinal": false,
+		"package": "uim.oop.helpers.exceptions",
+		"visibility": "public",
+		"comments": [
+			"Exception class for Xml. This exception will be thrown from Xml when it encounters an error."
+		],
+		"name": "XmlException",
+		"isAbstract": false,
+		"namespace": "uim.oop.helpers.exceptions.xml",
+		"isInherited": false,
+		"methods": {},
+		"hasParent": false,
+		"implements": [
+			"UIMException"
+		],
+		"isStatic": false,
+		"library": "uim-oop",
+		"header": "XmlException : UIMException",
+		"parent": ""
+	}
+}

@@ -35,13 +35,14 @@ void main() {
 	auto dfiles = readDFiles(projectsPath);
 	Files.save;
 	
-	Interfaces.parse(dfiles);
+	Interfaces.parseFiles(dfiles);
 	Interfaces.save;
 
-	return;
+	Classes.parseFiles(dfiles);
+	Classes.save;
+
 	Modules.save;
 	Packages.save;
-	Classes.save;
 
 	Classes.infos.byKeyValue
 		.each!((info) {

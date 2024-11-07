@@ -129,95 +129,6 @@ string[] allLinesWithLessIntendation(string[] lines, size_t intend) {
 }
 
 // #region classes
-void parseClass(string path, Json fileInfo = Json.emptyObject) {
-    parseClass(readFileByLine(path));
-}
-
-void parseClass(string[] lines, Json fileInfo = Json.emptyObject) {
-    string line;
-    size_t cursor;
-    foreach (i, l; lines) {
-        if (l.strip.startsWith(["//", "/*", "*", "/+"]))
-            continue;
-
-        if (l.contains("class ")) {
-            cursor = i;
-            line = l;
-            break;
-        }
-    }
-
-    if (line.isEmpty)
-        return;
-
-    Json info = Classes.create(line);
-    fileInfo.byKeyValue.each!(item => info[item.key] = item.value);
-    info.parseComments(lines, cursor);
-    info["namespace"] = namespace(lines);
-    info["library"] = libraryName(info.getString("namespace"));
-    info["package"] = packageName(info.getString("namespace"));
-    info["origin"] = line;
-
-    line = (line.contains("//") ? line.split("//")[0].strip : line)
-        .replace("{}", "")
-        .replace("{", "")
-        .replace("class ", "")
-        .strip;
-
-    if (line.contains("abstract ")) {
-        info["isAbstract"] = true;
-        line = line.replace("abstract ", "");
-    } else if (line.contains("final ")) {
-        info["isFinal"] = true;
-        line = line.replace("final ", "");
-    }
-    if (line.contains("static ")) {
-        info["isStatic"] = true;
-        line = line.replace("static ", "");
-    }
-    if (line.contains("protected ")) {
-        info["visibility"] = "protected";
-        line = line.replace("protected ", "");
-    } else if (line.contains("private ")) {
-        info["visibility"] = "private";
-        line = line.replace("private ", "");
-    } else {
-        line = line.replace("public ", "");
-    }
-
-    info["header"] = line;
-    if (line.contains(":")) {
-        info["name"] = line.split(":")[0].strip;
-        line.split(":")[1].strip.split(",")
-            .map!(item => item.strip)
-            .each!(item => info["implements"] ~= Json(item));
-
-        line.split(":")[1].strip.split(",")
-            .map!(item => item.strip)
-            .each!(item => info["parent"] = item.startsWith("D") ? item : "");
-    } else {
-        info["name"] = line;
-    }
-
-    if (lines.length > cursor) {
-        auto intendLines = lines[cursor .. $].filter!(line => line.intendation > 0).array;
-        if (intendLines.length > 0) {
-            auto minIntend = intendLines.map!(line => line.intendation).minElement;
-            intendLines
-                .filter!(line => !line.startsWith(["//", "/*", "assert("]))
-                .filter!(line => line.containsAll(["{", "(", ")"]))
-                .filter!(line => line.intendation == minIntend)
-                .map!(line => line.contains("//") ? line.split("//")[0].strip : line.strip)
-                .map!(line => line.contains("{") ? line.split("{")[0].strip : line.strip)
-                .map!(line => line.replace("{}", "").replace("{", "").strip)
-                .filter!(line => !line.strip.startsWith("/*"))
-                .each!(line =>
-                        info["methods"][line] = parseClassMethod(line));
-        }
-    }
-
-    // Classes.set(path, info);
-}
 
 // [abstract] class name [: parent [, interface...]]
 Json parseClassHeader(string line) {
@@ -817,17 +728,17 @@ DirEntry[] readDFiles(string path) {
         }
 
         if (file.isClassFile) {
-            parseClass(file);
+            Classes.parseFile(file);
         }
 
         if (file.isInterfaceFile) {
-            parseInterface(file);
+            Interfaces.parseFile(file);
         }
     });
 
     return files;
 }
-// #endregion d files
+// #endregion dfiles
 
 // #region sdl
 void readSdlFiles(string path) {
@@ -872,3 +783,23 @@ string[] sdlDependencies(string[] lines) {
         .array;
 }
 // #endregion sdl
+
+bool hasHeader(string[] lines, string keyword) {
+    return lines
+        .filter!(line => !line.strip.startsWith(["//", "/*", "*", "/+"]))
+        .any!(line => line.contains(keyword));
+}
+
+size_t findHeaderPos(string[] lines, string keyword) {
+    size_t cursor;
+    foreach (i, l; lines) {
+        if (l.strip.startsWith(["//", "/*", "*", "/+"]))
+            continue;
+
+        if (l.contains(keyword)) {
+            cursor = i;
+            break;
+        }
+    }
+    return cursor;
+}

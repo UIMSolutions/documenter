@@ -1,1 +1,82 @@
-{}
+{
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\errors\\error.d": {
+		"origin": "class UIMError : UIMObject, IError {",
+		"isFinal": false,
+		"package": "uim.oop.errors",
+		"visibility": "public",
+		"comments": [
+			"Error base class for UIM applications"
+		],
+		"name": "UIMError",
+		"isAbstract": false,
+		"namespace": "uim.oop.errors.error",
+		"isInherited": false,
+		"methods": {
+			"string traceAsString()": {
+				"origin": "string traceAsString()",
+				"isFinal": false,
+				"isProperty": false,
+				"parameters": "",
+				"visibility": "public",
+				"datatype": "string",
+				"isSafe": false,
+				"isConst": false,
+				"isAbstract": false,
+				"isInherited": false,
+				"header": "string traceAsString()",
+				"isStatic": false
+			},
+			"string label()": {
+				"origin": "string label()",
+				"isFinal": false,
+				"isProperty": false,
+				"parameters": "",
+				"visibility": "public",
+				"datatype": "string",
+				"isSafe": false,
+				"isConst": false,
+				"isAbstract": false,
+				"isInherited": false,
+				"header": "string label()",
+				"isStatic": false
+			},
+			"override bool initialize(Json[string] initData = null)": {
+				"origin": "override bool initialize(Json[string] initData = null)",
+				"isFinal": false,
+				"isProperty": false,
+				"parameters": "Json[string] initData = null",
+				"visibility": "public",
+				"datatype": "bool",
+				"isSafe": false,
+				"isConst": false,
+				"isAbstract": false,
+				"isInherited": true,
+				"header": "bool initialize(Json[string] initData = null)",
+				"isStatic": false
+			},
+			"LogLevel logLevel()": {
+				"origin": "LogLevel logLevel()",
+				"isFinal": false,
+				"isProperty": false,
+				"parameters": "",
+				"visibility": "public",
+				"datatype": "LogLevel",
+				"isSafe": false,
+				"isConst": false,
+				"isAbstract": false,
+				"isInherited": false,
+				"header": "LogLevel logLevel()",
+				"isStatic": false
+			}
+		},
+		"hasParent": false,
+		"implements": [
+			"UIMObject",
+			"IError"
+		],
+		"isStatic": false,
+		"library": "uim-oop",
+		"header": "UIMError : UIMObject, IError",
+		"parent": ""
+	}
+}

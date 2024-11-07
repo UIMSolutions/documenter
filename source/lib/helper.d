@@ -1,27 +1,24 @@
 module lib.helper;
 
 import lib;
- 
+
 string correctPath(string path) {
     path = path.strip;
     return path.endsWith("\\")
-        ? path
-        : path ~ "\\";
+        ? path : path ~ "\\";
 }
 
 string correctUrl(string url) {
     url = url.strip.lower;
     return url.endsWith("/")
-        ? url
-        : url ~ "/";
+        ? url : url ~ "/";
 }
 
 string packageName(string namespace) {
     namespace = namespace.strip;
     auto items = namespace.split(".");
     return items.length > 1
-        ? items[0..$-1].join(".")
-        : null; 
+        ? items[0 .. $ - 1].join(".") : null;
 }
 
 bool addPath(string rootPath, string path) {
@@ -51,7 +48,6 @@ bool addPath(string rootPath, string path) {
     }
 }
 
-
 string[] deleteComments(string[] lines) {
     return lines
         .filter!(line => !line.strip.startsWith("//") && !line.strip.startsWith("/*") && !line.strip.startsWith(
@@ -76,8 +72,7 @@ string namespace(string[] lines) {
 
 string namespace(string line) {
     return (line.strip.startsWith("module "))
-        ? line.replace("module ", "").strip.split(";")[0]
-        : null;
+        ? line.replace("module ", "").strip.split(";")[0] : null;
 }
 
 string filetype(string[] lines) {
@@ -152,9 +147,6 @@ bool createDirectories(Json source, string rootPath) {
     };
     return true;
 }
-
-
-
 
 /* void readFile(ref Json json, string filePath) {
     auto fileLines = readFileLines(filePath);
@@ -234,7 +226,6 @@ bool hasValue(string line, string value) {
 bool valueIn(string value, string[] lines) {
     return lines.any!(v => v == value);
 }
-
 
 bool isClass(Json json) {
     if (json == Json(null))
@@ -374,18 +365,17 @@ Json groupingLines(string[] lines) {
     return results;
 }
 
-
 string[] getClassContent(string[] lines) {
     string classLine;
     foreach (i, line; lines) {
-        if (i+1 >= lines.length-1) continue;
+        if (i + 1 >= lines.length - 1)
+            continue;
         if (lib.prettier.isClass(line)) {
             return allLinesWithGreaterIntendation(lines[i + 1 .. $ - 1], line.intendation);
         }
     }
     return null;
 }
-
 
 bool isMethodHeader(string line) {
     if (line.strip.startsWith("//") || line.strip.startsWith("/*"))
@@ -413,7 +403,6 @@ Json readMethodHeader(string line) {
 
     return method;
 }
-
 
 /* string parseLines(string[] lines) {
 	string namespace;
@@ -547,4 +536,13 @@ string[] removeFirst(string[] items, string value) {
         }
     }
     return items;
+}
+
+Json copyFileInfo(Json info, string path) {
+    Json fileInfo = Files.get(path);
+    if (!fileInfo.isNull)
+        return info;
+
+    fileInfo.byKeyValue.each!(item => info[item.key] = item.value);
+    return info;
 }

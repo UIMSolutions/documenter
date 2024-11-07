@@ -21,7 +21,7 @@ class DCollector {
         return _infos.get(name, Json(null));
     }
 
-/*     Json getWith(string key, string value) {
+    /*     Json getWith(string key, string value) {
         auto findings = _infos.byKeyValue
             .map!(info => info.value)
             .filter!(infoValue => infoValue.getString(key) == value)
@@ -56,13 +56,13 @@ class DCollector {
         return info;
     }
 
-    void parse(DirEntry[] files) {
+    void parseFiles(DirEntry[] files) {
         files
             .filter!(file => file.isFile)
-            .each!(file => parse(file));
+            .each!(file => parseFile(file));
     }
 
-    void parse(DirEntry file) {
+    void parseFile(DirEntry file) {
     }
 
     Json toJson() {
@@ -75,3 +75,4 @@ class DCollector {
         output.close;
     }
 }
+

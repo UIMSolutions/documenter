@@ -1,1 +1,23 @@
-{}
+{
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\models\\uim\\models\\classes\\attributes\\attribute.d": {
+		"origin": "class DAttribute : UIMObject, IAttribute {\r",
+		"isFinal": false,
+		"package": "uim.models.classes.attributes",
+		"visibility": "public",
+		"comments": [],
+		"name": "DAttribute",
+		"isAbstract": false,
+		"namespace": "uim.models.classes.attributes.attribute",
+		"isInherited": false,
+		"methods": {},
+		"hasParent": false,
+		"implements": [
+			"UIMObject",
+			"IAttribute"
+		],
+		"isStatic": false,
+		"library": "uim-models",
+		"header": "DAttribute : UIMObject, IAttribute",
+		"parent": ""
+	}
+}

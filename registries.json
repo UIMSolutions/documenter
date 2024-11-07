@@ -1,1 +1,142 @@
-{}
+{
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\formatters\\registry.d": {
+		"origin": "class DFormatterRegistry : DObjectRegistry!DFormatter {\r",
+		"isFinal": false,
+		"package": "uim.oop.formatters",
+		"visibility": "public",
+		"comments": [],
+		"name": "DFormatterRegistry",
+		"isAbstract": false,
+		"namespace": "uim.oop.formatters.registry",
+		"isInherited": false,
+		"methods": {},
+		"hasParent": false,
+		"implements": [
+			"DObjectRegistry!DFormatter"
+		],
+		"isStatic": false,
+		"library": "uim-oop",
+		"header": "DFormatterRegistry : DObjectRegistry!DFormatter",
+		"parent": "DObjectRegistry!DFormatter"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\commands\\registry.d": {
+		"origin": "class DCommandRegistry : DObjectRegistry!DCommand {\r",
+		"isFinal": false,
+		"package": "uim.oop.commands",
+		"visibility": "public",
+		"comments": [],
+		"name": "DCommandRegistry",
+		"isAbstract": false,
+		"namespace": "uim.oop.commands.registry",
+		"isInherited": false,
+		"methods": {},
+		"hasParent": false,
+		"implements": [
+			"DObjectRegistry!DCommand"
+		],
+		"isStatic": false,
+		"library": "uim-oop",
+		"header": "DCommandRegistry : DObjectRegistry!DCommand",
+		"parent": "DObjectRegistry!DCommand"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\errors\\registry.d": {
+		"origin": "class DErrorRegistry : DObjectRegistry!UIMError {",
+		"isFinal": false,
+		"package": "uim.oop.errors",
+		"visibility": "public",
+		"comments": [],
+		"name": "DErrorRegistry",
+		"isAbstract": false,
+		"namespace": "uim.oop.errors.registry",
+		"isInherited": false,
+		"methods": {},
+		"hasParent": false,
+		"implements": [
+			"DObjectRegistry!UIMError"
+		],
+		"isStatic": false,
+		"library": "uim-oop",
+		"header": "DErrorRegistry : DObjectRegistry!UIMError",
+		"parent": "DObjectRegistry!UIMError"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\validators\\registry.d": {
+		"origin": "class DValidatorRegistry : DObjectRegistry!DUIMValidator {\r",
+		"isFinal": false,
+		"package": "uim.oop.validators",
+		"visibility": "public",
+		"comments": [],
+		"name": "DValidatorRegistry",
+		"isAbstract": false,
+		"namespace": "uim.oop.validators.registry",
+		"isInherited": false,
+		"methods": {},
+		"hasParent": false,
+		"implements": [
+			"DObjectRegistry!DUIMValidator"
+		],
+		"isStatic": false,
+		"library": "uim-oop",
+		"header": "DValidatorRegistry : DObjectRegistry!DUIMValidator",
+		"parent": "DObjectRegistry!DUIMValidator"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\parsers\\registry.d": {
+		"origin": "class DParserRegistry : DObjectRegistry!DParser {\r",
+		"isFinal": false,
+		"package": "uim.oop.parsers",
+		"visibility": "public",
+		"comments": [],
+		"name": "DParserRegistry",
+		"isAbstract": false,
+		"namespace": "uim.oop.parsers.registry",
+		"isInherited": false,
+		"methods": {},
+		"hasParent": false,
+		"implements": [
+			"DObjectRegistry!DParser"
+		],
+		"isStatic": false,
+		"library": "uim-oop",
+		"header": "DParserRegistry : DObjectRegistry!DParser",
+		"parent": "DObjectRegistry!DParser"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\controllers\\uim\\controllers\\classes\\controllers\\registry.d": {
+		"origin": "class DControllerRegistry : DObjectRegistry!DController {\r",
+		"isFinal": false,
+		"package": "uim.controllers.classes.controllers",
+		"visibility": "public",
+		"comments": [],
+		"name": "DControllerRegistry",
+		"isAbstract": false,
+		"namespace": "uim.controllers.classes.controllers.registry",
+		"isInherited": false,
+		"methods": {},
+		"hasParent": false,
+		"implements": [
+			"DObjectRegistry!DController"
+		],
+		"isStatic": false,
+		"library": "uim-controllers",
+		"header": "DControllerRegistry : DObjectRegistry!DController",
+		"parent": "DObjectRegistry!DController"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\models\\uim\\models\\classes\\attributes\\registry.d": {
+		"origin": "class DAttributeRegistry : DObjectRegistry!DAttribute {\r",
+		"isFinal": false,
+		"package": "uim.models.classes.attributes",
+		"visibility": "public",
+		"comments": [],
+		"name": "DAttributeRegistry",
+		"isAbstract": false,
+		"namespace": "uim.models.classes.attributes.registry",
+		"isInherited": false,
+		"methods": {},
+		"hasParent": false,
+		"implements": [
+			"DObjectRegistry!DAttribute"
+		],
+		"isStatic": false,
+		"library": "uim-models",
+		"header": "DAttributeRegistry : DObjectRegistry!DAttribute",
+		"parent": "DObjectRegistry!DAttribute"
+	}
+}

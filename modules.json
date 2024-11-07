@@ -17,6 +17,16 @@
 		"package": "uim.html.snippets",
 		"name": "uim.html.snippets.dynamic"
 	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\patterns\\registry.d": {
+		"imports": [
+			"uim.oop"
+		],
+		"namespace": "uim.oop.patterns.registry",
+		"comments": [],
+		"library": "uim-oop",
+		"package": "uim.oop.patterns",
+		"name": "uim.oop.patterns.registry"
+	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\core\\uim\\core\\extras\\bitmap.d": {
 		"imports": [
 			"uim.core"
@@ -93,8 +103,32 @@
 		"package": "uim.oop.interfaces",
 		"name": "uim.oop.interfaces.list"
 	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\apps\\uim\\apps\\package.d": {
+		"imports": [
+			"colored",
+			"vibe.d",
+			"vibe.http.session : HttpSession = Session",
+			"uim.core",
+			"uim.oop",
+			"uim.apps.classes",
+			"uim.apps.enumerations",
+			"uim.apps.errors",
+			"uim.apps.exceptions",
+			"uim.apps.helpers",
+			"uim.apps.interfaces",
+			"uim.apps.mixins",
+			"uim.apps.tests"
+		],
+		"namespace": "uim.apps",
+		"comments": [],
+		"library": "uim-apps",
+		"package": "uim",
+		"name": "uim.apps"
+	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\events\\uim\\events\\mixins\\package.d": {
-		"imports": [],
+		"imports": [
+			"uim.events.mixins.event"
+		],
 		"namespace": "uim.events.mixins",
 		"comments": [],
 		"library": "uim-events",
@@ -117,14 +151,6 @@
 		"package": "uim.validations",
 		"name": "uim.validations.helpers"
 	},
-	"C:\\Users\\ONS\\PROJECTS2023\\uim\\orm\\uim\\views\\enumerations\\package.d": {
-		"imports": [],
-		"namespace": "uim.orm.enumerations",
-		"comments": [],
-		"library": "uim-orm",
-		"package": "uim.orm",
-		"name": "uim.orm.enumerations"
-	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\core\\uim\\core\\tests\\package.d": {
 		"imports": [],
 		"namespace": "uim.core.tests",
@@ -134,7 +160,9 @@
 		"name": "uim.core.tests"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\models\\uim\\models\\classes\\package.d": {
-		"imports": [],
+		"imports": [
+			"uim.models.classes.attributes"
+		],
 		"namespace": "uim.models.classes",
 		"comments": [],
 		"library": "uim-models",
@@ -181,13 +209,15 @@
 		"package": "uim.gui",
 		"name": "uim.gui.classes"
 	},
-	"C:\\Users\\ONS\\PROJECTS2023\\uim\\orm\\uim\\views\\mixins\\package.d": {
-		"imports": [],
-		"namespace": "uim.orm.mixins",
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\databases\\uim\\databases\\mixins\\statement.d": {
+		"imports": [
+			"uim.databases"
+		],
+		"namespace": "uim.databases.mixins.statement",
 		"comments": [],
-		"library": "uim-orm",
-		"package": "uim.orm",
-		"name": "uim.orm.mixins"
+		"library": "uim-databases",
+		"package": "uim.databases.mixins",
+		"name": "uim.databases.mixins.statement"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\controllers\\uim\\controllers\\exceptions\\package.d": {
 		"imports": [],
@@ -300,6 +330,14 @@
 		"library": "uim-oop",
 		"package": "uim.oop.mixins",
 		"name": "uim.oop.mixins.instanceconfig"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\apps\\uim\\apps\\enumerations\\package.d": {
+		"imports": [],
+		"namespace": "uim.apps.enumerations",
+		"comments": [],
+		"library": "uim-apps",
+		"package": "uim.apps",
+		"name": "uim.apps.enumerations"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\validators\\validator.d": {
 		"imports": [
@@ -442,6 +480,14 @@
 		"package": "uim.errors",
 		"name": "uim.errors.tests"
 	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\apps\\uim\\apps\\tests\\package.d": {
+		"imports": [],
+		"namespace": "uim.apps.tests",
+		"comments": [],
+		"library": "uim-apps",
+		"package": "uim.apps",
+		"name": "uim.apps.tests"
+	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\mixins\\configurable.d": {
 		"imports": [
 			"uim.oop"
@@ -492,6 +538,16 @@
 		"library": "uim-html",
 		"package": "uim.html.webstorage",
 		"name": "uim.html.webstorage.local"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\orm\\uim\\orm\\classes\\package.d": {
+		"imports": [
+			"uim.orm.classes.associations"
+		],
+		"namespace": "uim.orm.classes",
+		"comments": [],
+		"library": "uim-orm",
+		"package": "uim.orm",
+		"name": "uim.orm.classes"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\parsers\\factory.d": {
 		"imports": [
@@ -633,6 +689,16 @@
 		"package": "uim.securities",
 		"name": "uim.securities.interfaces"
 	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\models\\uim\\models\\classes\\attributes\\factory.d": {
+		"imports": [
+			"uim.models"
+		],
+		"namespace": "uim.models.classes.attributes.factory",
+		"comments": [],
+		"library": "uim-models",
+		"package": "uim.models.classes.attributes",
+		"name": "uim.models.classes.attributes.factory"
+	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\filesystems\\uim\\filesystems\\errors\\package.d": {
 		"imports": [],
 		"namespace": "uim.filesystems.errors",
@@ -651,6 +717,16 @@
 		"package": "uim.filesystems.helpers",
 		"name": "uim.filesystems.helpers.file"
 	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\patterns\\obj.d": {
+		"imports": [
+			"uim.oop"
+		],
+		"namespace": "uim.oop.patterns.obj",
+		"comments": [],
+		"library": "uim-oop",
+		"package": "uim.oop.patterns",
+		"name": "uim.oop.patterns.obj"
+	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\base\\package.d": {
 		"imports": [],
 		"namespace": "uim.oop.base",
@@ -668,14 +744,6 @@
 		"library": "uim-html",
 		"package": "uim.html",
 		"name": "uim.html.mixins"
-	},
-	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\complex\\package.d": {
-		"imports": [],
-		"namespace": "uim.oop.complex",
-		"comments": [],
-		"library": "uim-oop",
-		"package": "uim.oop",
-		"name": "uim.oop.complex"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\i18n\\uim\\i18n\\interfaces\\package.d": {
 		"imports": [],
@@ -812,6 +880,14 @@
 		"package": "uim.core.enumerations",
 		"name": "uim.core.enumerations.sort"
 	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\orm\\uim\\orm\\interfaces\\package.d": {
+		"imports": [],
+		"namespace": "uim.orm.interfaces",
+		"comments": [],
+		"library": "uim-orm",
+		"package": "uim.orm",
+		"name": "uim.orm.interfaces"
+	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\core\\uim\\core\\web\\json.d": {
 		"imports": [
 			"uim.core"
@@ -885,7 +961,11 @@
 		"name": "uim.ai.mixins"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\databases\\uim\\databases\\mixins\\package.d": {
-		"imports": [],
+		"imports": [
+			"uim.databases.mixins.driver",
+			"uim.databases.mixins.expression",
+			"uim.databases.mixins.statement"
+		],
 		"namespace": "uim.databases.mixins",
 		"comments": [],
 		"library": "uim-databases",
@@ -980,6 +1060,14 @@
 		"package": "uim.forms",
 		"name": "uim.forms.interfaces"
 	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\orm\\uim\\orm\\exceptions\\package.d": {
+		"imports": [],
+		"namespace": "uim.orm.exceptions",
+		"comments": [],
+		"library": "uim-orm",
+		"package": "uim.orm",
+		"name": "uim.orm.exceptions"
+	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\caches\\uim\\caches\\exceptions\\package.d": {
 		"imports": [],
 		"namespace": "uim.caches.exceptions",
@@ -987,6 +1075,14 @@
 		"library": "uim-caches",
 		"package": "uim.caches",
 		"name": "uim.caches.exceptions"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\apps\\uim\\apps\\helpers\\package.d": {
+		"imports": [],
+		"namespace": "uim.apps.helpers",
+		"comments": [],
+		"library": "uim-apps",
+		"package": "uim.apps",
+		"name": "uim.apps.helpers"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\core\\uim\\core\\io\\file.d": {
 		"imports": [
@@ -1086,7 +1182,10 @@
 		"name": "uim.collections.tests"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\models\\uim\\models\\interfaces\\package.d": {
-		"imports": [],
+		"imports": [
+			"uim.models.interfaces.attribute",
+			"uim.models.interfaces.model"
+		],
 		"namespace": "uim.models.interfaces",
 		"comments": [],
 		"library": "uim-models",
@@ -1159,28 +1258,15 @@
 		"package": "uim",
 		"name": "uim.genetics"
 	},
-	"C:\\Users\\ONS\\PROJECTS2023\\uim\\logging\\uim\\logging\\package.d": {
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\orm\\uim\\orm\\mixins\\association.d": {
 		"imports": [
-			"colored",
-			"vibe.d",
-			"vibe.http.session : HttpSession = Session",
-			"uim.core",
-			"uim.oop",
-			"uim.consoles",
-			"uim.logging.classes",
-			"uim.logging.enumerations",
-			"uim.logging.errors",
-			"uim.logging.exceptions",
-			"uim.logging.helpers",
-			"uim.logging.interfaces",
-			"uim.logging.mixins",
-			"uim.logging.tests"
+			"uim.orm"
 		],
-		"namespace": "uim.logging",
+		"namespace": "uim.orm.mixins.association",
 		"comments": [],
-		"library": "uim-logging",
-		"package": "uim",
-		"name": "uim.logging"
+		"library": "uim-orm",
+		"package": "uim.orm.mixins",
+		"name": "uim.orm.mixins.association"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\css\\uim\\css\\classes\\containers\\mediaquery.d": {
 		"imports": [
@@ -1219,6 +1305,29 @@
 		"library": "uim-filesystems",
 		"package": "uim.filesystems.classes",
 		"name": "uim.filesystems.classes.file"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\logging\\uim\\logging\\package.d": {
+		"imports": [
+			"colored",
+			"vibe.d",
+			"vibe.http.session : HttpSession = Session",
+			"uim.core",
+			"uim.oop",
+			"uim.consoles",
+			"uim.logging.classes",
+			"uim.logging.enumerations",
+			"uim.logging.errors",
+			"uim.logging.exceptions",
+			"uim.logging.helpers",
+			"uim.logging.interfaces",
+			"uim.logging.mixins",
+			"uim.logging.tests"
+		],
+		"namespace": "uim.logging",
+		"comments": [],
+		"library": "uim-logging",
+		"package": "uim",
+		"name": "uim.logging"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\databases\\uim\\databases\\errors\\package.d": {
 		"imports": [],
@@ -1397,6 +1506,14 @@
 		"package": "uim.core.containers.maps",
 		"name": "uim.core.containers.maps.values"
 	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\languages\\uim\\languages\\helpers\\package.d": {
+		"imports": [],
+		"namespace": "uim.languages.helpers",
+		"comments": [],
+		"library": "uim-languages",
+		"package": "uim.languages",
+		"name": "uim.languages.helpers"
+	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\filesystems\\uim\\filesystems\\classes\\virtual\\folder.d": {
 		"imports": [
 			"uim.filesystems"
@@ -1406,14 +1523,6 @@
 		"library": "uim-filesystems",
 		"package": "uim.filesystems.classes.virtual",
 		"name": "uim.filesystems.classes.virtual.folder"
-	},
-	"C:\\Users\\ONS\\PROJECTS2023\\uim\\languages\\uim\\languages\\helpers\\package.d": {
-		"imports": [],
-		"namespace": "uim.languages.helpers",
-		"comments": [],
-		"library": "uim-languages",
-		"package": "uim.languages",
-		"name": "uim.languages.helpers"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\interfaces\\runnable.d": {
 		"imports": [
@@ -1450,6 +1559,14 @@
 		"library": "uim-databases",
 		"package": "uim.databases",
 		"name": "uim.databases.tests"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\orm\\uim\\orm\\classes\\associations\\package.d": {
+		"imports": [],
+		"namespace": "uim.orm.classes.associations",
+		"comments": [],
+		"library": "uim-orm",
+		"package": "uim.orm.classes",
+		"name": "uim.orm.classes.associations"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\core\\uim\\core\\datatypes\\package.d": {
 		"imports": [
@@ -1601,6 +1718,16 @@
 		"package": "uim.oop",
 		"name": "uim.oop.simple"
 	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\models\\uim\\models\\interfaces\\model.d": {
+		"imports": [
+			"uim.models"
+		],
+		"namespace": "uim.models.interfaces.model",
+		"comments": [],
+		"library": "uim-models",
+		"package": "uim.models.interfaces",
+		"name": "uim.models.interfaces.model"
+	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\ai\\uim\\ai\\errors\\package.d": {
 		"imports": [],
 		"namespace": "uim.ai.errors",
@@ -1618,6 +1745,16 @@
 		"library": "uim-entitybases",
 		"package": "uim.entitybases",
 		"name": "uim.entitybases.exceptions"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\databases\\uim\\databases\\mixins\\expression.d": {
+		"imports": [
+			"uim.databases"
+		],
+		"namespace": "uim.databases.mixins.expression",
+		"comments": [],
+		"library": "uim-databases",
+		"package": "uim.databases.mixins",
+		"name": "uim.databases.mixins.expression"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\jsonbases\\uim\\jsonbases\\mixins\\collectionmanager.d": {
 		"imports": [
@@ -1671,6 +1808,16 @@
 		"package": "uim.jsonbases.mixins",
 		"name": "uim.jsonbases.mixins.base"
 	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\patterns\\collection.d": {
+		"imports": [
+			"uim.oop"
+		],
+		"namespace": "uim.oop.patterns.collection",
+		"comments": [],
+		"library": "uim-oop",
+		"package": "uim.oop.patterns",
+		"name": "uim.oop.patterns.collection"
+	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\mixins\\data.d": {
 		"imports": [
 			"uim.oop"
@@ -1698,22 +1845,6 @@
 		"library": "uim-filesystems",
 		"package": "uim.filesystems.classes.database",
 		"name": "uim.filesystems.classes.database.folder"
-	},
-	"C:\\Users\\ONS\\PROJECTS2023\\uim\\apps\\uim\\views\\classes\\package.d": {
-		"imports": [],
-		"namespace": "uim.apps.classes",
-		"comments": [],
-		"library": "uim-apps",
-		"package": "uim.apps",
-		"name": "uim.apps.classes"
-	},
-	"C:\\Users\\ONS\\PROJECTS2023\\uim\\orm\\uim\\views\\tests\\package.d": {
-		"imports": [],
-		"namespace": "uim.orm.tests",
-		"comments": [],
-		"library": "uim-orm",
-		"package": "uim.orm",
-		"name": "uim.orm.tests"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\filesystems\\uim\\filesystems\\exceptions\\exception.d": {
 		"imports": [
@@ -1777,28 +1908,6 @@
 		"package": "uim.events",
 		"name": "uim.events.interfaces"
 	},
-	"C:\\Users\\ONS\\PROJECTS2023\\uim\\orm\\uim\\views\\package.d": {
-		"imports": [
-			"colored",
-			"vibe.d",
-			"vibe.http.session : HttpSession = Session",
-			"uim.core",
-			"uim.oop",
-			"uim.orm.classes",
-			"uim.orm.enumerations",
-			"uim.orm.errors",
-			"uim.orm.exceptions",
-			"uim.orm.helpers",
-			"uim.orm.interfaces",
-			"uim.orm.mixins",
-			"uim.orm.tests"
-		],
-		"namespace": "uim.orm",
-		"comments": [],
-		"library": "uim-orm",
-		"package": "uim",
-		"name": "uim.orm"
-	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\filesystems\\uim\\filesystems\\classes\\memory\\filesystem.d": {
 		"imports": [
 			"uim.filesystems"
@@ -1859,6 +1968,16 @@
 		"package": "uim",
 		"name": "uim.filesystems"
 	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\models\\uim\\models\\mixins\\attribute.d": {
+		"imports": [
+			"uim.models"
+		],
+		"namespace": "uim.models.mixins.attribute",
+		"comments": [],
+		"library": "uim-models",
+		"package": "uim.models.mixins",
+		"name": "uim.models.mixins.attribute"
+	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\containers\\lists\\package.d": {
 		"imports": [],
 		"namespace": "uim.oop.containers.lists",
@@ -1876,6 +1995,16 @@
 		"library": "uim-oop",
 		"package": "uim.oop.mixins",
 		"name": "uim.oop.mixins.mergevariables"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\http\\uim\\http\\mixins\\middleware.d": {
+		"imports": [
+			"uim.http"
+		],
+		"namespace": "uim.http.mixins.middleware",
+		"comments": [],
+		"library": "uim-http",
+		"package": "uim.http.mixins",
+		"name": "uim.http.mixins.middleware"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\languages\\uim\\languages\\classes\\package.d": {
 		"imports": [],
@@ -1965,14 +2094,6 @@
 		"library": "uim-oop",
 		"package": "uim.oop.tests.constraints",
 		"name": "uim.oop.tests.constraints.session"
-	},
-	"C:\\Users\\ONS\\PROJECTS2023\\uim\\apps\\uim\\views\\helpers\\package.d": {
-		"imports": [],
-		"namespace": "uim.apps.helpers",
-		"comments": [],
-		"library": "uim-apps",
-		"package": "uim.apps",
-		"name": "uim.apps.helpers"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\services\\uim\\services\\classes\\services\\services.d": {
 		"imports": [
@@ -2173,6 +2294,19 @@
 		"package": "uim.web",
 		"name": "uim.web.tests"
 	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\models\\uim\\models\\classes\\attributes\\package.d": {
+		"imports": [
+			"uim.models.classes.attributes.attribute",
+			"uim.models.classes.attributes.builder",
+			"uim.models.classes.attributes.factory",
+			"uim.models.classes.attributes.registry"
+		],
+		"namespace": "uim.models.classes.attributes",
+		"comments": [],
+		"library": "uim-models",
+		"package": "uim.models.classes",
+		"name": "uim.models.classes.attributes"
+	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\services\\uim\\services\\tests\\package.d": {
 		"imports": [],
 		"namespace": "uim.services.tests",
@@ -2199,16 +2333,6 @@
 		"package": "uim.neural",
 		"name": "uim.neural.tests"
 	},
-	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\objects\\factory.d": {
-		"imports": [
-			"uim.oop"
-		],
-		"namespace": "uim.oop.objects.factory",
-		"comments": [],
-		"library": "uim-oop",
-		"package": "uim.oop.objects",
-		"name": "uim.oop.objects.factory"
-	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\formatters\\formatter.d": {
 		"imports": [
 			"uim.oop"
@@ -2218,6 +2342,28 @@
 		"library": "uim-oop",
 		"package": "uim.oop.formatters",
 		"name": "uim.oop.formatters.formatter"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\orm\\uim\\orm\\package.d": {
+		"imports": [
+			"colored",
+			"vibe.d",
+			"vibe.http.session : HttpSession = Session",
+			"uim.core",
+			"uim.oop",
+			"uim.orm.classes",
+			"uim.orm.enumerations",
+			"uim.orm.errors",
+			"uim.orm.exceptions",
+			"uim.orm.helpers",
+			"uim.orm.interfaces",
+			"uim.orm.mixins",
+			"uim.orm.tests"
+		],
+		"namespace": "uim.orm",
+		"comments": [],
+		"library": "uim-orm",
+		"package": "uim",
+		"name": "uim.orm"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\filesystems\\uim\\filesystems\\interfaces\\linkmanager.d": {
 		"imports": [
@@ -2537,26 +2683,15 @@
 		"package": "uim.oop",
 		"name": "uim.oop.errors"
 	},
-	"C:\\Users\\ONS\\PROJECTS2023\\uim\\apps\\uim\\views\\enumerations\\package.d": {
-		"imports": [],
-		"namespace": "uim.apps.enumerations",
-		"comments": [],
-		"library": "uim-apps",
-		"package": "uim.apps",
-		"name": "uim.apps.enumerations"
-	},
-	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\objects\\package.d": {
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\patterns\\factory.d": {
 		"imports": [
-			"uim.oop.objects.collection",
-			"uim.oop.objects.obj",
-			"uim.oop.objects.factory",
-			"uim.oop.objects.registry"
+			"uim.oop"
 		],
-		"namespace": "uim.oop.objects",
+		"namespace": "uim.oop.patterns.factory",
 		"comments": [],
 		"library": "uim-oop",
-		"package": "uim.oop",
-		"name": "uim.oop.objects"
+		"package": "uim.oop.patterns",
+		"name": "uim.oop.patterns.factory"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\networks\\uim\\networks\\exceptions\\package.d": {
 		"imports": [],
@@ -2597,14 +2732,6 @@
 		"library": "uim-jsonbases",
 		"package": "uim.jsonbases",
 		"name": "uim.jsonbases.tests"
-	},
-	"C:\\Users\\ONS\\PROJECTS2023\\uim\\apps\\uim\\views\\exceptions\\package.d": {
-		"imports": [],
-		"namespace": "uim.apps.exceptions",
-		"comments": [],
-		"library": "uim-apps",
-		"package": "uim.apps",
-		"name": "uim.apps.exceptions"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\commands\\uim\\commands\\enumerations\\package.d": {
 		"imports": [],
@@ -2725,16 +2852,6 @@
 		"library": "uim-oop",
 		"package": "uim.oop.tests",
 		"name": "uim.oop.tests.middlewaredispatcher"
-	},
-	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\registries\\package.d": {
-		"imports": [
-			"uim.oop"
-		],
-		"namespace": "uim.oop.registries",
-		"comments": [],
-		"library": "uim-oop",
-		"package": "uim.oop",
-		"name": "uim.oop.registries"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\genetics\\uim\\genetics\\interfaces\\package.d": {
 		"imports": [],
@@ -2944,6 +3061,16 @@
 		"package": "uim.networks",
 		"name": "uim.networks.mixins"
 	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\i18n\\uim\\i18n\\mixins\\translator.d": {
+		"imports": [
+			"uim.i18n"
+		],
+		"namespace": "uim.i18n.mixins.translator",
+		"comments": [],
+		"library": "uim-i18n",
+		"package": "uim.i18n.mixins",
+		"name": "uim.i18n.mixins.translator"
+	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\web\\uim\\web\\exceptions\\package.d": {
 		"imports": [
 			"uim.web.exceptions.exception"
@@ -2997,16 +3124,6 @@
 		"library": "uim-oop",
 		"package": "uim.oop.mixins",
 		"name": "uim.oop.mixins.cloneable"
-	},
-	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\objects\\collection.d": {
-		"imports": [
-			"uim.oop"
-		],
-		"namespace": "uim.oop.objects.collection",
-		"comments": [],
-		"library": "uim-oop",
-		"package": "uim.oop.objects",
-		"name": "uim.oop.objects.collection"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\core\\uim\\core\\extras\\package.d": {
 		"imports": [
@@ -3229,6 +3346,16 @@
 		"package": "uim.oop.interfaces",
 		"name": "uim.oop.interfaces.comparable"
 	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\errors\\uim\\errors\\mixins\\exception.d": {
+		"imports": [
+			"uim.errors"
+		],
+		"namespace": "uim.errors.mixins.exception",
+		"comments": [],
+		"library": "uim-errors",
+		"package": "uim.errors.mixins",
+		"name": "uim.errors.mixins.exception"
+	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\core\\uim\\core\\containers\\arrays\\package.d": {
 		"imports": [
 			"uim.core.containers.arrays.array_",
@@ -3261,13 +3388,13 @@
 		"package": "uim.jsonbases.helpers",
 		"name": "uim.jsonbases.helpers.folder"
 	},
-	"C:\\Users\\ONS\\PROJECTS2023\\uim\\orm\\uim\\views\\classes\\package.d": {
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\apps\\uim\\apps\\exceptions\\package.d": {
 		"imports": [],
-		"namespace": "uim.orm.classes",
+		"namespace": "uim.apps.exceptions",
 		"comments": [],
-		"library": "uim-orm",
-		"package": "uim.orm",
-		"name": "uim.orm.classes"
+		"library": "uim-apps",
+		"package": "uim.apps",
+		"name": "uim.apps.exceptions"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\html\\uim\\html\\webstorage\\package.d": {
 		"imports": [
@@ -3280,6 +3407,16 @@
 		"library": "uim-html",
 		"package": "uim.html",
 		"name": "uim.html.webstorage"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\apps\\uim\\apps\\interfaces\\package.d": {
+		"imports": [
+			"uim.apps.interfaces.application"
+		],
+		"namespace": "uim.apps.interfaces",
+		"comments": [],
+		"library": "uim-apps",
+		"package": "uim.apps",
+		"name": "uim.apps.interfaces"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\html\\uim\\html\\classes\\components\\sidebar_dropdown.d": {
 		"imports": [
@@ -3379,7 +3516,10 @@
 		"name": "uim.events.helpers"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\models\\uim\\models\\mixins\\package.d": {
-		"imports": [],
+		"imports": [
+			"uim.models.mixins.attribute",
+			"uim.models.mixins.model"
+		],
 		"namespace": "uim.models.mixins",
 		"comments": [],
 		"library": "uim-models",
@@ -3411,6 +3551,19 @@
 		"library": "uim-validations",
 		"package": "uim.validations",
 		"name": "uim.validations.exceptions"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\patterns\\package.d": {
+		"imports": [
+			"uim.oop.patterns.collection",
+			"uim.oop.patterns.obj",
+			"uim.oop.patterns.factory",
+			"uim.oop.patterns.registry"
+		],
+		"namespace": "uim.oop.patterns",
+		"comments": [],
+		"library": "uim-oop",
+		"package": "uim.oop",
+		"name": "uim.oop.patterns"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\interfaces\\consoleapplication.d": {
 		"imports": [
@@ -3554,6 +3707,14 @@
 		"package": "uim.controllers",
 		"name": "uim.controllers.mixins"
 	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\orm\\uim\\orm\\helpers\\package.d": {
+		"imports": [],
+		"namespace": "uim.orm.helpers",
+		"comments": [],
+		"library": "uim-orm",
+		"package": "uim.orm",
+		"name": "uim.orm.helpers"
+	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\commands\\command.d": {
 		"imports": [
 			"uim.oop"
@@ -3563,6 +3724,16 @@
 		"library": "uim-oop",
 		"package": "uim.oop.commands",
 		"name": "uim.oop.commands.command"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\models\\uim\\models\\classes\\attributes\\builder.d": {
+		"imports": [
+			"uim.models"
+		],
+		"namespace": "uim.models.classes.attributes.builder",
+		"comments": [],
+		"library": "uim-models",
+		"package": "uim.models.classes.attributes",
+		"name": "uim.models.classes.attributes.builder"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\filesystems\\uim\\filesystems\\tests\\folder.d": {
 		"imports": [
@@ -3583,14 +3754,6 @@
 		"library": "uim-filesystems",
 		"package": "uim.filesystems.classes.os.windows",
 		"name": "uim.filesystems.classes.os.windows.file"
-	},
-	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\keypairs\\package.d": {
-		"imports": [],
-		"namespace": "uim.oop.keypairs",
-		"comments": [],
-		"library": "uim-oop",
-		"package": "uim.oop",
-		"name": "uim.oop.keypairs"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\filesystems\\uim\\filesystems\\tests\\link.d": {
 		"imports": [
@@ -3637,6 +3800,16 @@
 		"package": "uim.html",
 		"name": "uim.html.helpers"
 	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\models\\uim\\models\\interfaces\\attribute.d": {
+		"imports": [
+			"uim.models"
+		],
+		"namespace": "uim.models.interfaces.attribute",
+		"comments": [],
+		"library": "uim-models",
+		"package": "uim.models.interfaces",
+		"name": "uim.models.interfaces.attribute"
+	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\core\\uim\\core\\datatypes\\string_.d": {
 		"imports": [
 			"uim.core",
@@ -3677,7 +3850,11 @@
 		"name": "uim.core.containers.arrays.string_"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\errors\\uim\\errors\\mixins\\package.d": {
-		"imports": [],
+		"imports": [
+			"uim.errors.mixins.error",
+			"uim.errors.mixins.exception",
+			"uim.errors.mixins.formatter"
+		],
 		"namespace": "uim.errors.mixins",
 		"comments": [],
 		"library": "uim-errors",
@@ -3752,6 +3929,16 @@
 		"library": "uim-models",
 		"package": "uim",
 		"name": "uim.models"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\apps\\uim\\apps\\interfaces\\application.d": {
+		"imports": [
+			"uim.apps"
+		],
+		"namespace": "uim.apps.interfaces.application",
+		"comments": [],
+		"library": "uim-apps",
+		"package": "uim.apps.interfaces",
+		"name": "uim.apps.interfaces.application"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\formatters\\package.d": {
 		"imports": [
@@ -3957,13 +4144,15 @@
 		"package": "uim.oop.mixins.properties",
 		"name": "uim.oop.mixins.properties.functional"
 	},
-	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\tools\\package.d": {
-		"imports": [],
-		"namespace": "uim.oop.tools",
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\models\\uim\\models\\classes\\attributes\\registry.d": {
+		"imports": [
+			"uim.models"
+		],
+		"namespace": "uim.models.classes.attributes.registry",
 		"comments": [],
-		"library": "uim-oop",
-		"package": "uim.oop",
-		"name": "uim.oop.tools"
+		"library": "uim-models",
+		"package": "uim.models.classes.attributes",
+		"name": "uim.models.classes.attributes.registry"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\filesystems\\uim\\filesystems\\classes\\virtual\\package.d": {
 		"imports": [
@@ -3986,6 +4175,16 @@
 		"package": "uim.forms",
 		"name": "uim.forms.enumerations"
 	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\apps\\uim\\apps\\classes\\package.d": {
+		"imports": [
+			"uim.apps.classes.applications"
+		],
+		"namespace": "uim.apps.classes",
+		"comments": [],
+		"library": "uim-apps",
+		"package": "uim.apps",
+		"name": "uim.apps.classes"
+	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\html\\uim\\html\\webstorage\\session.d": {
 		"imports": [
 			"uim.html"
@@ -3995,6 +4194,16 @@
 		"library": "uim-html",
 		"package": "uim.html.webstorage",
 		"name": "uim.html.webstorage.session"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\i18n\\uim\\i18n\\mixins\\catalog.d": {
+		"imports": [
+			"uim.i18n"
+		],
+		"namespace": "uim.i18n.mixins.catalog",
+		"comments": [],
+		"library": "uim-i18n",
+		"package": "uim.i18n.mixins",
+		"name": "uim.i18n.mixins.catalog"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\neural\\uim\\neural\\classes\\package.d": {
 		"imports": [],
@@ -4014,6 +4223,14 @@
 		"package": "uim.oop.tests",
 		"name": "uim.oop.tests.unitconsecutivetrait"
 	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\tools\\package.d": {
+		"imports": [],
+		"namespace": "uim.oop.tools",
+		"comments": [],
+		"library": "uim-oop",
+		"package": "uim.oop",
+		"name": "uim.oop.tools"
+	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\jsonbases\\uim\\jsonbases\\interfaces\\package.d": {
 		"imports": [
 			"uim.jsonbases.interfaces.base",
@@ -4028,13 +4245,27 @@
 		"package": "uim.jsonbases",
 		"name": "uim.jsonbases.interfaces"
 	},
-	"C:\\Users\\ONS\\PROJECTS2023\\uim\\orm\\uim\\views\\exceptions\\package.d": {
-		"imports": [],
-		"namespace": "uim.orm.exceptions",
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\securities\\uim\\securities\\package.d": {
+		"imports": [
+			"colored",
+			"vibe.d",
+			"vibe.http.session : HttpSession = Session",
+			"uim.core",
+			"uim.oop",
+			"uim.securities.classes",
+			"uim.securities.enumerations",
+			"uim.securities.errors",
+			"uim.securities.exceptions",
+			"uim.securities.helpers",
+			"uim.securities.interfaces",
+			"uim.securities.mixins",
+			"uim.securities.tests"
+		],
+		"namespace": "uim.securities",
 		"comments": [],
-		"library": "uim-orm",
-		"package": "uim.orm",
-		"name": "uim.orm.exceptions"
+		"library": "uim-securities",
+		"package": "uim",
+		"name": "uim.securities"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\filesystems\\uim\\filesystems\\tests\\file.d": {
 		"imports": [
@@ -4080,27 +4311,15 @@
 		"package": "uim.mails",
 		"name": "uim.mails.helpers"
 	},
-	"C:\\Users\\ONS\\PROJECTS2023\\uim\\securities\\uim\\securities\\package.d": {
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\http\\uim\\http\\mixins\\cookie.d": {
 		"imports": [
-			"colored",
-			"vibe.d",
-			"vibe.http.session : HttpSession = Session",
-			"uim.core",
-			"uim.oop",
-			"uim.securities.classes",
-			"uim.securities.enumerations",
-			"uim.securities.errors",
-			"uim.securities.exceptions",
-			"uim.securities.helpers",
-			"uim.securities.interfaces",
-			"uim.securities.mixins",
-			"uim.securities.tests"
+			"uim.http"
 		],
-		"namespace": "uim.securities",
+		"namespace": "uim.http.mixins.cookie",
 		"comments": [],
-		"library": "uim-securities",
-		"package": "uim",
-		"name": "uim.securities"
+		"library": "uim-http",
+		"package": "uim.http.mixins",
+		"name": "uim.http.mixins.cookie"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\core\\uim\\core\\mixins\\properties\\classical.d": {
 		"imports": [
@@ -4139,14 +4358,6 @@
 		"library": "uim-commands",
 		"package": "uim.commands",
 		"name": "uim.commands.classes"
-	},
-	"C:\\Users\\ONS\\PROJECTS2023\\uim\\orm\\uim\\views\\interfaces\\package.d": {
-		"imports": [],
-		"namespace": "uim.orm.interfaces",
-		"comments": [],
-		"library": "uim-orm",
-		"package": "uim.orm",
-		"name": "uim.orm.interfaces"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\jsonbases\\uim\\jsonbases\\package.d": {
 		"imports": [
@@ -4189,16 +4400,6 @@
 		"package": "uim",
 		"name": "uim.datasources"
 	},
-	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\objects\\registry.d": {
-		"imports": [
-			"uim.oop"
-		],
-		"namespace": "uim.oop.objects.registry",
-		"comments": [],
-		"library": "uim-oop",
-		"package": "uim.oop.objects",
-		"name": "uim.oop.objects.registry"
-	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\genetics\\uim\\genetics\\mixins\\package.d": {
 		"imports": [],
 		"namespace": "uim.genetics.mixins",
@@ -4226,7 +4427,10 @@
 		"name": "uim.caches.interfaces"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\http\\uim\\http\\mixins\\package.d": {
-		"imports": [],
+		"imports": [
+			"uim.http.mixins.cookie",
+			"uim.http.mixins.middleware"
+		],
 		"namespace": "uim.http.mixins",
 		"comments": [],
 		"library": "uim-http",
@@ -4279,15 +4483,15 @@
 		"package": "uim.css",
 		"name": "uim.css.mixins"
 	},
-	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\interfaces\\retrystrategy.d": {
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\logging\\uim\\logging\\mixins\\formatter.d": {
 		"imports": [
-			"uim.oop"
+			"uim.logging"
 		],
-		"namespace": "uim.oop.interfaces.retrystrategy",
+		"namespace": "uim.logging.mixins.formatter",
 		"comments": [],
-		"library": "uim-oop",
-		"package": "uim.oop.interfaces",
-		"name": "uim.oop.interfaces.retrystrategy"
+		"library": "uim-logging",
+		"package": "uim.logging.mixins",
+		"name": "uim.logging.mixins.formatter"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\html\\uim\\html\\snippets\\client.d": {
 		"imports": [
@@ -4299,15 +4503,15 @@
 		"package": "uim.html.snippets",
 		"name": "uim.html.snippets.client"
 	},
-	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\objects\\obj.d": {
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\interfaces\\retrystrategy.d": {
 		"imports": [
 			"uim.oop"
 		],
-		"namespace": "uim.oop.objects.obj",
+		"namespace": "uim.oop.interfaces.retrystrategy",
 		"comments": [],
 		"library": "uim-oop",
-		"package": "uim.oop.objects",
-		"name": "uim.oop.objects.obj"
+		"package": "uim.oop.interfaces",
+		"name": "uim.oop.interfaces.retrystrategy"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\errors\\registry.d": {
 		"imports": [
@@ -4318,6 +4522,16 @@
 		"library": "uim-oop",
 		"package": "uim.oop.errors",
 		"name": "uim.oop.errors.registry"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\models\\uim\\models\\mixins\\model.d": {
+		"imports": [
+			"uim.models"
+		],
+		"namespace": "uim.models.mixins.model",
+		"comments": [],
+		"library": "uim-models",
+		"package": "uim.models.mixins",
+		"name": "uim.models.mixins.model"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\routings\\uim\\routings\\classes\\package.d": {
 		"imports": [],
@@ -4670,14 +4884,6 @@
 		"package": "uim.css",
 		"name": "uim.css.helpers"
 	},
-	"C:\\Users\\ONS\\PROJECTS2023\\uim\\orm\\uim\\views\\helpers\\package.d": {
-		"imports": [],
-		"namespace": "uim.orm.helpers",
-		"comments": [],
-		"library": "uim-orm",
-		"package": "uim.orm",
-		"name": "uim.orm.helpers"
-	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\containers\\container.d": {
 		"imports": [
 			"uim.oop"
@@ -4714,6 +4920,16 @@
 		"package": "uim.core.containers.arrays",
 		"name": "uim.core.containers.arrays.lifo"
 	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\logging\\uim\\logging\\mixins\\logger.d": {
+		"imports": [
+			"uim.logging"
+		],
+		"namespace": "uim.logging.mixins.logger",
+		"comments": [],
+		"library": "uim-logging",
+		"package": "uim.logging.mixins",
+		"name": "uim.logging.mixins.logger"
+	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\validators\\registry.d": {
 		"imports": [
 			"uim.oop"
@@ -4733,14 +4949,6 @@
 		"library": "uim-jsonbases",
 		"package": "uim.jsonbases.classes.collections",
 		"name": "uim.jsonbases.classes.collections.file"
-	},
-	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\observers\\package.d": {
-		"imports": [],
-		"namespace": "uim.oop.observers",
-		"comments": [],
-		"library": "uim-oop",
-		"package": "uim.oop",
-		"name": "uim.oop.observers"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\interfaces\\map.d": {
 		"imports": [
@@ -4848,6 +5056,14 @@
 		"library": "uim-css",
 		"package": "uim.css",
 		"name": "uim.css.declaration"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\orm\\uim\\orm\\tests\\package.d": {
+		"imports": [],
+		"namespace": "uim.orm.tests",
+		"comments": [],
+		"library": "uim-orm",
+		"package": "uim.orm",
+		"name": "uim.orm.tests"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\logging\\uim\\logging\\mixins\\package.d": {
 		"imports": [],
@@ -5038,6 +5254,16 @@
 		"library": "uim-core",
 		"package": "uim.core.datatypes",
 		"name": "uim.core.datatypes.datetime"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\events\\uim\\events\\mixins\\event.d": {
+		"imports": [
+			"uim.events"
+		],
+		"namespace": "uim.events.mixins.event",
+		"comments": [],
+		"library": "uim-events",
+		"package": "uim.events.mixins",
+		"name": "uim.events.mixins.event"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\html\\uim\\html\\classes\\attributes\\package.d": {
 		"imports": [
@@ -5339,6 +5565,16 @@
 		"package": "uim.web",
 		"name": "uim.web.interfaces"
 	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\apps\\uim\\apps\\mixins\\package.d": {
+		"imports": [
+			"uim.apps.mixins.application"
+		],
+		"namespace": "uim.apps.mixins",
+		"comments": [],
+		"library": "uim-apps",
+		"package": "uim.apps",
+		"name": "uim.apps.mixins"
+	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\filesystems\\uim\\filesystems\\interfaces\\foldermanager.d": {
 		"imports": [
 			"uim.filesystems"
@@ -5366,6 +5602,16 @@
 		"library": "uim-oop",
 		"package": "uim.oop.interfaces",
 		"name": "uim.oop.interfaces.registry"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\databases\\uim\\databases\\mixins\\driver.d": {
+		"imports": [
+			"uim.databases"
+		],
+		"namespace": "uim.databases.mixins.driver",
+		"comments": [],
+		"library": "uim-databases",
+		"package": "uim.databases.mixins",
+		"name": "uim.databases.mixins.driver"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\html\\uim\\html\\webworker\\package.d": {
 		"imports": [
@@ -5492,14 +5738,6 @@
 		"library": "uim-validations",
 		"package": "uim.validations",
 		"name": "uim.validations.classes"
-	},
-	"C:\\Users\\ONS\\PROJECTS2023\\uim\\apps\\uim\\views\\interfaces\\package.d": {
-		"imports": [],
-		"namespace": "uim.apps.interfaces",
-		"comments": [],
-		"library": "uim-apps",
-		"package": "uim.apps",
-		"name": "uim.apps.interfaces"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\forms\\uim\\forms\\tests\\package.d": {
 		"imports": [],
@@ -5643,6 +5881,16 @@
 		"package": "uim",
 		"name": "uim.forms"
 	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\errors\\uim\\errors\\mixins\\formatter.d": {
+		"imports": [
+			"uim.errors"
+		],
+		"namespace": "uim.errors.mixins.formatter",
+		"comments": [],
+		"library": "uim-errors",
+		"package": "uim.errors.mixins",
+		"name": "uim.errors.mixins.formatter"
+	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\tests\\testsession.d": {
 		"imports": [
 			"uim.oop"
@@ -5662,6 +5910,16 @@
 		"library": "uim-controllers",
 		"package": "uim.controllers",
 		"name": "uim.controllers.interfaces"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\apps\\uim\\apps\\mixins\\application.d": {
+		"imports": [
+			"uim.apps"
+		],
+		"namespace": "uim.apps.mixins.application",
+		"comments": [],
+		"library": "uim-apps",
+		"package": "uim.apps.mixins",
+		"name": "uim.apps.mixins.application"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\filesystems\\uim\\filesystems\\classes\\virtual\\link.d": {
 		"imports": [
@@ -5773,14 +6031,6 @@
 		"package": "uim.oop.interfaces",
 		"name": "uim.oop.interfaces.keyandpath"
 	},
-	"C:\\Users\\ONS\\PROJECTS2023\\uim\\apps\\uim\\views\\errors\\package.d": {
-		"imports": [],
-		"namespace": "uim.apps.errors",
-		"comments": [],
-		"library": "uim-apps",
-		"package": "uim.apps",
-		"name": "uim.apps.errors"
-	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\jsonbases\\uim\\jsonbases\\mixins\\collection.d": {
 		"imports": [
 			"uim.jsonbases"
@@ -5790,6 +6040,16 @@
 		"library": "uim-jsonbases",
 		"package": "uim.jsonbases.mixins",
 		"name": "uim.jsonbases.mixins.collection"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\tests\\exception.d": {
+		"imports": [
+			"uim.oop"
+		],
+		"namespace": "uim.oop.tests.exception",
+		"comments": [],
+		"library": "uim-oop",
+		"package": "uim.oop.tests",
+		"name": "uim.oop.tests.exception"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\interfaces\\containerapplication.d": {
 		"imports": [
@@ -5827,47 +6087,13 @@
 		"package": "uim.events",
 		"name": "uim.events.enumerations"
 	},
-	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\core\\package.d": {
-		"imports": [
-			"std.stdio"
-		],
-		"namespace": "uim.oop.core",
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\scriptings\\uim\\scriptings\\exceptions\\package.d": {
+		"imports": [],
+		"namespace": "uim.scriptings.exceptions",
 		"comments": [],
-		"library": "uim-oop",
-		"package": "uim.oop",
-		"name": "uim.oop.core"
-	},
-	"C:\\Users\\ONS\\PROJECTS2023\\uim\\apps\\uim\\views\\package.d": {
-		"imports": [
-			"colored",
-			"vibe.d",
-			"vibe.http.session : HttpSession = Session",
-			"uim.core",
-			"uim.oop",
-			"uim.apps.classes",
-			"uim.apps.enumerations",
-			"uim.apps.errors",
-			"uim.apps.exceptions",
-			"uim.apps.helpers",
-			"uim.apps.interfaces",
-			"uim.apps.mixins",
-			"uim.apps.tests"
-		],
-		"namespace": "uim.apps",
-		"comments": [],
-		"library": "uim-apps",
-		"package": "uim",
-		"name": "uim.apps"
-	},
-	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\tests\\exception.d": {
-		"imports": [
-			"uim.oop"
-		],
-		"namespace": "uim.oop.tests.exception",
-		"comments": [],
-		"library": "uim-oop",
-		"package": "uim.oop.tests",
-		"name": "uim.oop.tests.exception"
+		"library": "uim-scriptings",
+		"package": "uim.scriptings",
+		"name": "uim.scriptings.exceptions"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\filesystems\\uim\\filesystems\\classes\\os\\windows\\folder.d": {
 		"imports": [
@@ -5878,14 +6104,6 @@
 		"library": "uim-filesystems",
 		"package": "uim.filesystems.classes.os.windows",
 		"name": "uim.filesystems.classes.os.windows.folder"
-	},
-	"C:\\Users\\ONS\\PROJECTS2023\\uim\\scriptings\\uim\\scriptings\\exceptions\\package.d": {
-		"imports": [],
-		"namespace": "uim.scriptings.exceptions",
-		"comments": [],
-		"library": "uim-scriptings",
-		"package": "uim.scriptings",
-		"name": "uim.scriptings.exceptions"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\consoles\\uim\\consoles\\mixins\\package.d": {
 		"imports": [
@@ -5979,13 +6197,15 @@
 		"package": "uim.oop",
 		"name": "uim.oop.direntries"
 	},
-	"C:\\Users\\ONS\\PROJECTS2023\\uim\\apps\\uim\\views\\mixins\\package.d": {
-		"imports": [],
-		"namespace": "uim.apps.mixins",
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\apps\\uim\\apps\\classes\\applications\\package.d": {
+		"imports": [
+			"uim.apps.classes.applications.application"
+		],
+		"namespace": "uim.apps.classes.applications",
 		"comments": [],
 		"library": "uim-apps",
-		"package": "uim.apps",
-		"name": "uim.apps.mixins"
+		"package": "uim.apps.classes",
+		"name": "uim.apps.classes.applications"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\filesystems\\uim\\filesystems\\classes\\os\\linux\\folder.d": {
 		"imports": [
@@ -6093,7 +6313,10 @@
 		"name": "uim.oop.commands.mixins"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\i18n\\uim\\i18n\\mixins\\package.d": {
-		"imports": [],
+		"imports": [
+			"uim.i18n.mixins.catalog",
+			"uim.i18n.mixins.translator"
+		],
 		"namespace": "uim.i18n.mixins",
 		"comments": [],
 		"library": "uim-i18n",
@@ -6118,15 +6341,15 @@
 		"package": "uim.routings",
 		"name": "uim.routings.enumerations"
 	},
-	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\tests\\fixtures\\truncatefixturestrategy.d": {
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\errors\\uim\\errors\\mixins\\error.d": {
 		"imports": [
-			"uim.oop"
+			"uim.errors"
 		],
-		"namespace": "uim.oop.tests.fixtures.truncatefixturestrategy",
+		"namespace": "uim.errors.mixins.error",
 		"comments": [],
-		"library": "uim-oop",
-		"package": "uim.oop.tests.fixtures",
-		"name": "uim.oop.tests.fixtures.truncatefixturestrategy"
+		"library": "uim-errors",
+		"package": "uim.errors.mixins",
+		"name": "uim.errors.mixins.error"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\tests\\configuration.d": {
 		"imports": [
@@ -6138,6 +6361,16 @@
 		"package": "uim.oop.tests",
 		"name": "uim.oop.tests.configuration"
 	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\tests\\fixtures\\truncatefixturestrategy.d": {
+		"imports": [
+			"uim.oop"
+		],
+		"namespace": "uim.oop.tests.fixtures.truncatefixturestrategy",
+		"comments": [],
+		"library": "uim-oop",
+		"package": "uim.oop.tests.fixtures",
+		"name": "uim.oop.tests.fixtures.truncatefixturestrategy"
+	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\oop\\uim\\oop\\direntries\\fileinfo.d": {
 		"imports": [
 			"uim.oop"
@@ -6147,14 +6380,6 @@
 		"library": "uim-oop",
 		"package": "uim.oop.direntries",
 		"name": "uim.oop.direntries.fileinfo"
-	},
-	"C:\\Users\\ONS\\PROJECTS2023\\uim\\orm\\uim\\views\\errors\\package.d": {
-		"imports": [],
-		"namespace": "uim.orm.errors",
-		"comments": [],
-		"library": "uim-orm",
-		"package": "uim.orm",
-		"name": "uim.orm.errors"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\languages\\uim\\languages\\exceptions\\package.d": {
 		"imports": [
@@ -6232,6 +6457,14 @@
 		"library": "uim-oop",
 		"package": "uim.oop",
 		"name": "uim.oop.tests"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\orm\\uim\\orm\\errors\\package.d": {
+		"imports": [],
+		"namespace": "uim.orm.errors",
+		"comments": [],
+		"library": "uim-orm",
+		"package": "uim.orm",
+		"name": "uim.orm.errors"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\forms\\uim\\forms\\classes\\package.d": {
 		"imports": [],
@@ -6353,6 +6586,14 @@
 		"package": "uim.oop.formatters",
 		"name": "uim.oop.formatters.mixins"
 	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\apps\\uim\\apps\\errors\\package.d": {
+		"imports": [],
+		"namespace": "uim.apps.errors",
+		"comments": [],
+		"library": "uim-apps",
+		"package": "uim.apps",
+		"name": "uim.apps.errors"
+	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\datasources\\uim\\datasources\\mixins\\package.d": {
 		"imports": [],
 		"namespace": "uim.datasources.mixins",
@@ -6423,6 +6664,16 @@
 		"library": "uim-css",
 		"package": "uim.css",
 		"name": "uim.css.classes"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\models\\uim\\models\\classes\\attributes\\attribute.d": {
+		"imports": [
+			"uim.models"
+		],
+		"namespace": "uim.models.classes.attributes.attribute",
+		"comments": [],
+		"library": "uim-models",
+		"package": "uim.models.classes.attributes",
+		"name": "uim.models.classes.attributes.attribute"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\servers\\uim\\servers\\helpers\\package.d": {
 		"imports": [],
@@ -6620,13 +6871,13 @@
 		"package": "uim.html",
 		"name": "uim.html.parser"
 	},
-	"C:\\Users\\ONS\\PROJECTS2023\\uim\\apps\\uim\\views\\tests\\package.d": {
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\models\\uim\\models\\errors\\package.d": {
 		"imports": [],
-		"namespace": "uim.apps.tests",
+		"namespace": "uim.models.errors",
 		"comments": [],
-		"library": "uim-apps",
-		"package": "uim.apps",
-		"name": "uim.apps.tests"
+		"library": "uim-models",
+		"package": "uim.models",
+		"name": "uim.models.errors"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\http\\uim\\http\\tests\\package.d": {
 		"imports": [],
@@ -6636,13 +6887,15 @@
 		"package": "uim.http",
 		"name": "uim.http.tests"
 	},
-	"C:\\Users\\ONS\\PROJECTS2023\\uim\\models\\uim\\models\\errors\\package.d": {
-		"imports": [],
-		"namespace": "uim.models.errors",
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\apps\\uim\\apps\\classes\\applications\\application.d": {
+		"imports": [
+			"uim.apps"
+		],
+		"namespace": "uim.apps.classes.applications.application",
 		"comments": [],
-		"library": "uim-models",
-		"package": "uim.models",
-		"name": "uim.models.errors"
+		"library": "uim-apps",
+		"package": "uim.apps.classes.applications",
+		"name": "uim.apps.classes.applications.application"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\filesystems\\uim\\filesystems\\mixins\\file.d": {
 		"imports": [
@@ -6764,6 +7017,14 @@
 		"package": "uim.oop",
 		"name": "uim.oop.helpers"
 	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\orm\\uim\\orm\\enumerations\\package.d": {
+		"imports": [],
+		"namespace": "uim.orm.enumerations",
+		"comments": [],
+		"library": "uim-orm",
+		"package": "uim.orm",
+		"name": "uim.orm.enumerations"
+	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\filesystems\\uim\\filesystems\\mixins\\foldermanager.d": {
 		"imports": [
 			"uim.filesystems"
@@ -6853,6 +7114,16 @@
 		"package": "uim.entitybases",
 		"name": "uim.entitybases.classes"
 	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\orm\\uim\\orm\\mixins\\package.d": {
+		"imports": [
+			"uim.orm.mixins.association"
+		],
+		"namespace": "uim.orm.mixins",
+		"comments": [],
+		"library": "uim-orm",
+		"package": "uim.orm",
+		"name": "uim.orm.mixins"
+	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\filesystems\\uim\\filesystems\\interfaces\\drive.d": {
 		"imports": [
 			"uim.filesystems"
@@ -6884,14 +7155,6 @@
 		"package": "uim",
 		"name": "uim.gui"
 	},
-	"C:\\Users\\ONS\\PROJECTS2023\\uim\\mails\\uim\\mails\\mixins\\package.d": {
-		"imports": [],
-		"namespace": "uim.mails.mixins",
-		"comments": [],
-		"library": "uim-mails",
-		"package": "uim.mails",
-		"name": "uim.mails.mixins"
-	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\core\\uim\\core\\containers\\maps\\values\\map.d": {
 		"imports": [
 			"uim.core"
@@ -6901,6 +7164,14 @@
 		"library": "uim-core",
 		"package": "uim.core.containers.maps.values",
 		"name": "uim.core.containers.maps.values.map"
+	},
+	"C:\\Users\\ONS\\PROJECTS2023\\uim\\mails\\uim\\mails\\mixins\\package.d": {
+		"imports": [],
+		"namespace": "uim.mails.mixins",
+		"comments": [],
+		"library": "uim-mails",
+		"package": "uim.mails",
+		"name": "uim.mails.mixins"
 	},
 	"C:\\Users\\ONS\\PROJECTS2023\\uim\\core\\uim\\core\\containers\\maps\\string_.d": {
 		"imports": [
